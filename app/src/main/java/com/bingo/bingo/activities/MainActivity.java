@@ -111,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
         Fragment fragment = null;
         Class fragmentClass;
         switch(menuItem.getItemId()) {
+
             case R.id.nav_first_fragment:
                 fragmentClass =FindStoreFragment.class;
                 break;
@@ -123,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
                 fragmentClass = AboutUsFragment.class;
                 break;
             default:
-                fragmentClass = SignInFragment.class;
+                fragmentClass =FindStoreFragment.class;
         }
 
         try {
