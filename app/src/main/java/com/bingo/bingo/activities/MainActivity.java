@@ -48,8 +48,15 @@ public class MainActivity extends AppCompatActivity {
         setupDrawerContent(nvDrawer);
 
 
+        nvDrawer.getMenu().getItem(0).setChecked(true);
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.flContent, new FindStoreFragment()).commit();
+        //setTitle(menuItem.getTitle());
+        setTitle(R.string.title_first_fragment);
+
 
     }
+
 
 
     @Override
@@ -77,11 +84,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
     private void setupDrawerContent(NavigationView navigationView) {
         navigationView.setNavigationItemSelectedListener(
                 new NavigationView.OnNavigationItemSelectedListener() {
+
+
                     @Override
                     public boolean onNavigationItemSelected(MenuItem menuItem) {
                         selectDrawerItem(menuItem);
@@ -96,6 +103,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected (MenuItem item){
         // The action bar home/up action should open or close the drawer.
+
         switch (item.getItemId()) {
             case android.R.id.home:
                 mDrawer.openDrawer(GravityCompat.START);
@@ -110,6 +118,7 @@ public class MainActivity extends AppCompatActivity {
         // Create a new fragment and specify the fragment to show based on nav item clicked
         Fragment fragment = null;
         Class fragmentClass;
+
         switch(menuItem.getItemId()) {
 
             case R.id.nav_first_fragment:
@@ -143,6 +152,14 @@ public class MainActivity extends AppCompatActivity {
         setTitle(menuItem.getTitle());
         // Close the navigation drawer
         mDrawer.closeDrawers();
+
+
+
+
+
     }
+
+
+
 
 }
