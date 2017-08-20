@@ -12,6 +12,9 @@
     <string name="title_second_fragment">Sign in</string>
     <string name="title_third_fragment">Create Account</string>
     <string name="title_fourth_fragment">About us</string>
+    <string name="title_splashscreen">Bingo!</string>
+    <string name="title_splash_screen">Bingo!</string>
+    <string name="motto_splash_screen">\"Where you find what you need\"</string>
 
 
 </resources>
