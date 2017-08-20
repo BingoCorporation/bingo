@@ -39,7 +39,6 @@
             android:ems="10"
             android:hint="@string/hint_username"
             android:inputType="textPersonName"
-            tools:hint="@string/hint_username"
             android:textColorHint="@color/holo_green_dark"
             android:backgroundTint="@color/holo_green_dark"/>
 
