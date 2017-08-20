@@ -8,7 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import com.bingo.bingo.R;
 
 public class SplashScreenActivity extends AppCompatActivity {
-    private static int splash_time=2000;
+    private static int splash_time=4000;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
