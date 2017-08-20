@@ -22,14 +22,6 @@ public class AddABusiness extends Fragment {
         return inflater.inflate(fragment_add_a_business, container, false);
     }
 
-/*
-    public void onSignIn(){
 
-
-        Intent intent = new Intent(get, FindStoreFragment.class);
-
-        startActivity(intent);
-
-    }*/
 
 }
