@@ -8,15 +8,15 @@ import android.support.v7.app.AppCompatActivity;
 import com.bingo.bingo.R;
 
 public class SplashScreenActivity extends AppCompatActivity {
-    private static int splash_time=6000;
+    private static int splash_time=2000;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
-        //Launch Screenplash
+        //Launch Splash Screen
         new Handler().postDelayed(new Runnable(){
             public void run(){
-                Intent intent = new Intent(SplashScreenActivity.this, MainActivity.class);
+                Intent intent = new Intent(SplashScreenActivity.this, SignInActivity.class);
                 startActivity(intent);
                 finish();
             }

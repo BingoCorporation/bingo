@@ -67,7 +67,7 @@
             android:background="@color/holo_green_dark"
             android:text="@string/txt_Login"
             android:textColor="@android:color/white"
-           />
+            />
 
         <TextView
             android:id="@+id/textView"
