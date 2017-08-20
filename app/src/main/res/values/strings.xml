@@ -15,6 +15,9 @@
     <string name="title_splashscreen">Bingo!</string>
     <string name="title_splash_screen">Bingo!</string>
     <string name="motto_splash_screen">\"Where you find what you need\"</string>
+    <string name="account_profile">Profile</string>
+    <string name="account_logout">Log out</string>
+    <string name="account_history">History of services</string>
 
 
 </resources>

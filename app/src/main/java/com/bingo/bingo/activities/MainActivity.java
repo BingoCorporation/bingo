@@ -15,7 +15,7 @@ import com.bingo.bingo.R;
 import com.bingo.bingo.fragments.AboutUsFragment;
 import com.bingo.bingo.fragments.CreateAccountFragment;
 import com.bingo.bingo.fragments.FindStoreFragment;
-import com.bingo.bingo.fragments.SignInFragment;
+import com.bingo.bingo.fragments.AddABusiness;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -125,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
                 fragmentClass =FindStoreFragment.class;
                 break;
             case R.id.nav_second_fragment:
-                fragmentClass = SignInFragment.class;
+                fragmentClass = AddABusiness.class;
                 break;
             case R.id.nav_third_fragment:
                 fragmentClass= CreateAccountFragment.class;
