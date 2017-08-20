@@ -31,13 +31,13 @@ public class SignInActivity extends AppCompatActivity {
 
 
             if(username.getText().toString().equals("bingo") && password.getText().toString().equals("bingo")) {
-                               Toast.makeText(SignInActivity.this, "Login", Toast.LENGTH_LONG);
+                               Toast.makeText(SignInActivity.this, "Login", Toast.LENGTH_LONG).show();
                                 Intent intent = new Intent(this, MainActivity.class);
                                 startActivity(intent);
                                 //Toast.makeText(LoginActivity.this,"Hello "+etUsername.getText().toString()+" .You logged in succesfully",Toast.LENGTH_LONG).show();
                                     }
             else {
-                    Toast.makeText(SignInActivity.this, "Invalid Username or Password", Toast.LENGTH_LONG);
+                    Toast.makeText(SignInActivity.this, "Invalid Username or Password", Toast.LENGTH_LONG).show();
             }
 
             //Toast.makeText(LoginActivity.this,"Hello "+etUsername.getText().toString()+" .You logged in succesfully",Toast.LENGTH_LONG).show();
