@@ -8,7 +8,7 @@
     <string name="hint_password">Password</string>
     <string name="txt_Login">Sign in</string>
     <string name="forget_password">Forgot your password ?</string>
-    <string name="title_first_fragment">Find a business or its service</string>
+    <string name="title_first_fragment">Find a business or a service</string>
     <string name="title_second_fragment">Add a business</string>
     <string name="title_third_fragment">Settings</string>
     <string name="title_fourth_fragment">About us</string>

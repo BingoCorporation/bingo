@@ -16,9 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.SignInActivity"></activity>
-        <activity android:name=".activities.MainActivity"></activity>
-
+        <activity android:name=".activities.SignInActivity" />
+        <activity android:name=".activities.MainActivity" />
+        <activity android:name=".activities.OlisActivity"></activity>
     </application>
 
 </manifest>
