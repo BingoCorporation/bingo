@@ -2,28 +2,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:background="#fff">
 
 
-    <RelativeLayout
+    <LinearLayout
+        android:id="@+id/layoutentete"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="@android:color/white"
-        android:id="@+id/relativeLayout">
+        android:layout_height="100dp"
+        android:layout_marginTop="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
         <TextView
-            android:layout_width="match_parent"
+            android:id="@+id/txtlog"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/app_name"
-            android:textColor="@color/holo_green_dark"
-            android:textSize="40sp"
-            android:layout_centerVertical="true" />
-    </RelativeLayout>
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif"
+            android:text="BINGO"
+            android:textColor="@android:color/holo_green_dark"
+            android:layout_gravity="center"
+            android:textSize="60sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+    </LinearLayout>
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:layout_below="@+id/layoutentete"
+        android:layout_margin="30dp"
+        android:layout_alignParentEnd="true"
         android:id="@+id/linearLayout"
         android:layout_centerVertical="true"
         android:layout_alignParentStart="true">
@@ -32,12 +44,11 @@
             android:id="@+id/etUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/etPassword"
-            android:layout_alignParentStart="true"
-            android:layout_marginBottom="26dp"
-            android:drawableLeft="@drawable/ic_user"
+            android:layout_marginTop="20dp"
             android:ems="10"
-            android:hint="@string/hint_username"
+            android:drawableLeft="@drawable/ic_user"
+            android:gravity="left|fill"
+            android:hint="Username"
             android:inputType="textPersonName"
             android:textColorHint="@color/holo_green_dark"
             android:backgroundTint="@color/holo_green_dark"/>
@@ -46,18 +57,23 @@
             android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/linearLayout"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="@color/holo_green_dark"
             android:drawableLeft="@drawable/ic_password"
             android:ems="10"
-            android:hint="@string/hint_password"
+            android:gravity="left|fill"
+            android:hint="Password"
             android:inputType="textPassword"
-            android:textColorHint="@color/holo_green_dark"
-            android:backgroundTint="@color/holo_green_dark"/>
+            android:textColorHint="@color/holo_green_dark" />
+
+        <CheckBox
+            android:id="@+id/chkshowpass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show Password"/>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btn_signin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/etPassword"
@@ -68,15 +84,25 @@
             android:textColor="@android:color/white"
             android:onClick="onSignIn"
             />
+        <TextView
+            android:id="@+id/txtforgotpass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:text="Forgot your paswword"
+            android:layout_below="@+id/linearcorp"
+            android:layout_marginTop="20dp"/>
 
         <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
+            android:id="@+id/txtcreateaccount"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/etPassword"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="23dp"
-            android:text="@string/forget_password" />
+            android:gravity="center_horizontal"
+            android:text="Create new Account"
+            android:layout_below="@+id/txtforgotpass"
+            android:layout_marginTop="30dp"/>
 
     </LinearLayout>
 
