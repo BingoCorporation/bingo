@@ -1,5 +1,6 @@
 package com.bingo.bingo.models;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -16,8 +17,12 @@ public class produits {
     public Date created;
     public String objectId;
 
+
     public produits(){}
 
+    public produits(String nom_produit) {
+        this.nom_produit = nom_produit;
+    }
 
     public Boolean getEtat_produit() {
         return etat_produit;
@@ -73,5 +78,20 @@ public class produits {
 
     public void setObjectId(String objectId) {
         this.objectId = objectId;
+    }
+
+
+
+
+
+    public static ArrayList<produits>getProduits(){
+
+        ArrayList<produits> produits = new ArrayList<>();
+        produits.add(new produits("Pizzas"));
+        produits.add(new produits("Subs"));
+        produits.add(new produits("Cremes a la glace"));
+        produits.add(new produits("Autres"));
+        return produits;
+
     }
 }
