@@ -92,17 +92,19 @@
             android:gravity="center_horizontal"
             android:text="Forgot your paswword"
             android:layout_below="@+id/linearcorp"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="20dp"
+            android:textColor="@color/colorPrimary"/>
 
         <TextView
-            android:id="@+id/txtcreateaccount"
+            android:id="@+id/tvcreateaccount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/txtforgotpass"
             android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
             android:gravity="center_horizontal"
             android:text="Create new Account"
-            android:layout_below="@+id/txtforgotpass"
-            android:layout_marginTop="30dp"/>
+            android:textColor="@color/colorPrimary" />
 
     </LinearLayout>
 
