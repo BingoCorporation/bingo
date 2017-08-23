@@ -13,7 +13,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import com.bingo.bingo.R;
 import com.bingo.bingo.fragments.AboutUsFragment;
-import com.bingo.bingo.fragments.CreateAccountFragment;
+import com.bingo.bingo.fragments.HistoryServicesFragment;
+import com.bingo.bingo.fragments.LogOutFragment;
+import com.bingo.bingo.fragments.ProfileFragment;
+import com.bingo.bingo.fragments.SettingsFragment;
 import com.bingo.bingo.fragments.FindStoreFragment;
 import com.bingo.bingo.fragments.AddABusiness;
 
@@ -128,9 +131,15 @@ public class MainActivity extends AppCompatActivity {
                 fragmentClass = AddABusiness.class;
                 break;
             case R.id.nav_third_fragment:
-                fragmentClass= CreateAccountFragment.class;
+                fragmentClass= SettingsFragment.class;
             case R.id.nav_fourth_fragment:
                 fragmentClass = AboutUsFragment.class;
+            case R.id.nav_fifth_fragment:
+                fragmentClass = ProfileFragment.class;
+            case R.id.nav_sixth_fragment:
+                fragmentClass = HistoryServicesFragment.class;
+            case R.id.nav_seventh_fragment:
+                fragmentClass = LogOutFragment.class;
                 break;
             default:
                 fragmentClass =FindStoreFragment.class;
