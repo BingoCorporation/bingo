@@ -24,7 +24,7 @@
     </group>
 
 
-    <item android:title="Account">
+    <item android:title="@string/title_nav_account">
         <menu>
             <group android:checkableBehavior="single">
                 <item

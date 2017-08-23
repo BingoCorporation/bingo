@@ -61,15 +61,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
         drawerToggle.syncState();
     }
-
-
-
 
 
     private ActionBarDrawerToggle setupDrawerToggle() {
@@ -98,8 +94,6 @@ public class MainActivity extends AppCompatActivity {
                         return true;
                     }
                 });
-
-
     }
 
 
@@ -132,12 +126,16 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.nav_third_fragment:
                 fragmentClass= SettingsFragment.class;
+                break;
             case R.id.nav_fourth_fragment:
                 fragmentClass = AboutUsFragment.class;
+                break;
             case R.id.nav_fifth_fragment:
                 fragmentClass = ProfileFragment.class;
+                break;
             case R.id.nav_sixth_fragment:
                 fragmentClass = HistoryServicesFragment.class;
+                break;
             case R.id.nav_seventh_fragment:
                 fragmentClass = LogOutFragment.class;
                 break;
@@ -162,13 +160,6 @@ public class MainActivity extends AppCompatActivity {
         // Close the navigation drawer
         mDrawer.closeDrawers();
 
-
-
-
-
     }
-
-
-
 
 }

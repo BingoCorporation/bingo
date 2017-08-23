@@ -4,14 +4,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bingo.bingo.R;
 
 public class SignInActivity extends AppCompatActivity {
-     TextView tvcreateAccount;
+    // TextView tvCreateAccount;
+     Button btnCreateAccount;
      EditText username;
      EditText password;
 
@@ -20,13 +21,13 @@ public class SignInActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
-       tvcreateAccount=(TextView) findViewById(R.id.tvcreateaccount);
+        btnCreateAccount=(Button) findViewById(R.id.btnCreateAccount);
         username=(EditText)findViewById(R.id.etUsername);
         password=(EditText)findViewById(R.id.etPassword);
-        tvcreateAccount.setOnClickListener(new View.OnClickListener() {
+        btnCreateAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(SignInActivity.this, "Create a new Aacount", Toast.LENGTH_LONG).show();
+                Toast.makeText(SignInActivity.this, "Create a new Account", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(getApplicationContext(), CreateAccountActivity.class);
                startActivity(intent);
             }

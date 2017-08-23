@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:fontFamily="sans-serif"
-            android:text="BINGO"
+            android:text="@string/app_name"
             android:textColor="@android:color/holo_green_dark"
             android:layout_gravity="center"
             android:textSize="60sp"
@@ -45,57 +45,77 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:ems="10"
             android:drawableLeft="@drawable/ic_user"
+            android:ems="10"
             android:gravity="left|fill"
-            android:hint="Username"
+            android:hint="@string/hint_signin_username"
             android:inputType="textPersonName"
-            android:textColorHint="@color/holo_green_dark"
-            android:backgroundTint="@color/holo_green_dark"/>
+            android:textColorHint="@color/holo_green_dark" />
 
         <EditText
             android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:backgroundTint="@color/holo_green_dark"
             android:drawableLeft="@drawable/ic_password"
             android:ems="10"
             android:gravity="left|fill"
-            android:hint="Password"
+            android:hint="@string/hint_signin_password"
             android:inputType="textPassword"
             android:textColorHint="@color/holo_green_dark" />
 
         <CheckBox
-            android:id="@+id/chkshowpass"
+            android:id="@+id/checkboxShowPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Show Password"/>
+            android:text="@string/txt_signin_showpassword" />
 
         <Button
-            android:id="@+id/btn_signin"
+            android:id="@+id/btnSignIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/etPassword"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="45dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="30dp"
             android:background="@color/holo_green_dark"
-            android:text="@string/txt_Login"
-            android:textColor="@android:color/white"
             android:onClick="onSignIn"
-            />
-        <TextView
-            android:id="@+id/txtforgotpass"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:gravity="center_horizontal"
-            android:text="Forgot your paswword"
-            android:layout_below="@+id/linearcorp"
-            android:layout_marginTop="20dp"
-            android:textColor="@color/colorPrimary"/>
+            android:text="@string/txt_Login"
+            android:textColor="@android:color/white" />
+
 
         <TextView
+            android:id="@+id/tvOr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/holo_green_dark"
+            android:text="OR" />
+
+        <Button
+            android:id="@+id/btnCreateAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etPassword"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@color/holo_green_dark"
+            android:text="@string/txt_signin_createaccount"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tvForgotPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearcorp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:linksClickable="false"
+            android:text="@string/txt_signin_forgotpassword"
+            android:textColor="@color/colorPrimary" />
+
+        <!---<TextView
             android:id="@+id/tvcreateaccount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -103,8 +123,8 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
             android:gravity="center_horizontal"
-            android:text="Create new Account"
-            android:textColor="@color/colorPrimary" />
+            android:text="@string/txt_signin_createaccount"
+            android:textColor="@color/colorPrimary" />-->
 
     </LinearLayout>
 
