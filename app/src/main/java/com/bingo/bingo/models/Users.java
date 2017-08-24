@@ -14,7 +14,7 @@ public class Users {
     public String name;
     public String password;
     public String telephone;
-    public String type;
+
     public Date created;
     public String objectId;
 
@@ -67,14 +67,6 @@ public class Users {
 
     public void setTelephone(String telephone) {
         this.telephone = telephone;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
     }
 
     public Date getCreated() {
