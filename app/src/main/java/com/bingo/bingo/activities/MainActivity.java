@@ -11,17 +11,20 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+
+import com.backendless.Backendless;
 import com.bingo.bingo.R;
 import com.bingo.bingo.fragments.AboutUsFragment;
+import com.bingo.bingo.fragments.AddABusiness;
+import com.bingo.bingo.fragments.FindStoreFragment;
 import com.bingo.bingo.fragments.HistoryServicesFragment;
 import com.bingo.bingo.fragments.LogOutFragment;
 import com.bingo.bingo.fragments.ProfileFragment;
 import com.bingo.bingo.fragments.SettingsFragment;
-import com.bingo.bingo.fragments.FindStoreFragment;
-import com.bingo.bingo.fragments.AddABusiness;
 
 public class MainActivity extends AppCompatActivity {
-
+    public static final String App_ID="6489B38C-DCC1-9240-FF77-984DC15FAB00";
+    public static final String Secret_Key="D8D8428D-0D09-2B26-FFDB-0CB665428700";
     private DrawerLayout mDrawer;
     private Toolbar toolbar;
     private NavigationView nvDrawer;
@@ -35,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_main);
         setContentView(R.layout.activity_main);
-
+        Backendless.initApp(this,App_ID,Secret_Key);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
 
         setSupportActionBar(toolbar);

@@ -7,8 +7,8 @@
     tools:context="com.bingo.bingo.activities.CreateAccountActivity">
 <LinearLayout
     android:orientation="vertical"
-    android:layout_marginTop="60dp"
-    android:layout_marginBottom="20dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="5dp"
     android:id="@+id/linearhead"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -29,7 +29,7 @@
         android:layout_below="@+id/linearhead"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_margin="10dp"
         android:orientation="vertical">
 
      <EditText
@@ -77,8 +77,19 @@
             android:layout_height="wrap_content"
             android:textColorHint="@color/holo_green_dark"
             android:backgroundTint="@color/holo_green_dark"/>
+
+        <EditText
+            android:id="@+id/etadresse"
+            android:layout_width="match_parent"
+            android:hint="Adresse"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="20dp"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/holo_green_dark"
+            android:backgroundTint="@color/holo_green_dark"/>
+
         <Button
-            android:id="@+id/btn_create"
+            android:id="@+id/btn_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/etPassword"
@@ -86,8 +97,8 @@
             android:layout_marginTop="10dp"
             android:background="@color/holo_green_dark"
             android:text="Create Account"
+            android:onClick="onSignIn"
             android:textColor="@android:color/white"
-            android:onClick="onCreate"
             />
     </LinearLayout>
 

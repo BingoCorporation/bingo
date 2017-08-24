@@ -48,8 +48,9 @@
             android:ems="10"
             android:drawableLeft="@drawable/ic_user"
             android:gravity="left|fill"
-            android:hint="Username"
-            android:inputType="textPersonName"
+            android:hint="Phone number"
+            android:inputType="phone"
+            android:digits="1234567890"
             android:textColorHint="@color/holo_green_dark"
             android:backgroundTint="@color/holo_green_dark"/>
 
