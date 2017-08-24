@@ -34,6 +34,10 @@
     <string name="txt_signin_forgotpassword">Forgot your password ?</string>
     <string name="txt_signin_createaccount">Sign Up</string>
     <string name="txt_navheader">Welcome to Bingo</string>
+    <string name="hint_business_name">Name</string>
+    <string name="hint_business_adress">Adress</string>
+    <string name="hint_business_phone">Phone</string>
+    <string name="hint_business_email">Email</string>
 
 
 </resources>

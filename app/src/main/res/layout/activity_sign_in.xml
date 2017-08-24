@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff">
+    android:background="@android:color/white">
 
 
     <LinearLayout
@@ -151,7 +151,7 @@
             android:gravity="center_horizontal"
             android:linksClickable="false"
             android:text="@string/txt_signin_forgotpassword"
-            android:textColor="@color/colorPrimary" />
+            android:textColor="@color/holo_green_dark" />
 
 
     </LinearLayout>
