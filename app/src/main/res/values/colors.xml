@@ -4,4 +4,6 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="holo_green_dark">#ff669900</color>
+    <color name="color_facebook">#3b5998</color>
+    <color name="color_twitter"> #00aced</color>
 </resources>
