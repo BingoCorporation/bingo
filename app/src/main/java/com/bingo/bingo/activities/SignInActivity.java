@@ -19,34 +19,69 @@ import com.backendless.async.callback.AsyncCallback;
 import com.backendless.exceptions.BackendlessFault;
 import com.bingo.bingo.R;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
-import com.google.android.gms.common.SignInButton;
 
 public class SignInActivity extends AppCompatActivity {
-    EditText username;
-    EditText password;
-    CheckBox checkboxShowPassword;
-    Button btnCreateAccount;
-    SignInButton button;
+
        // CheckBox checkpass;
     String SERVER_CLIENT_ID="737268983278-icssnq1b369kecbb7f2eol64940cbhlk.apps.googleusercontent.com";
     GoogleSignInOptions gSignInOptions;
     public static final String App_ID="6489B38C-DCC1-9240-FF77-984DC15FAB00";
     public static final String Secret_Key="D8D8428D-0D09-2B26-FFDB-0CB665428700";
+
+    // TextView tvCreateAccount;
+     Button btnCreateAccount;
+     EditText username;
+     EditText password;
+    CheckBox checkboxShowPassword;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
         Backendless.initApp(this,App_ID,Secret_Key);
        // checkpass=(CheckBox) findViewById(R.id.chkshowpass);
+
+
+       //get the username EditText
         username=(EditText)findViewById(R.id.etUsername);
+        //get the password EditText
         password=(EditText)findViewById(R.id.etPassword);
         //get the checkbox show/hide password
         checkboxShowPassword = (CheckBox)findViewById(R.id.checkboxShowPassword);
+
         btnCreateAccount=(Button) findViewById(R.id.btnCreateAccount);
+
+        //get the button for creating account
+        btnCreateAccount=(Button) findViewById(R.id.btnCreateAccount);
+
+
+        //add onCheckedListener on Checkbox
+        //When user clicks on this checkbox this is the handler
+        checkboxShowPassword.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                //Checkbox status is changed from unchecked to checked
+                if(!isChecked){
+                    //show password
+                    password.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                }
+                else
+                {
+                   //hide password
+                    password.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+
+                }
+
+
+            }
+        });
+
+
         btnCreateAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(SignInActivity.this, "Create a new Aacount", Toast.LENGTH_LONG).show();
+                Toast.makeText(SignInActivity.this, "Create a new Account", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(getApplicationContext(), CreateAccountActivity.class);
                startActivity(intent);
             }

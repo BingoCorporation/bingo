@@ -13,6 +13,8 @@ public class Unite {
     public String nom_unite;
     public Date created;
 
+
+
     public Unite() {
     }
 
@@ -23,6 +25,13 @@ public class Unite {
     public void setEntrepriseId(entreprise entrepriseId) {
         this.entrepriseId = entrepriseId;
     }
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> afd237bea4bd670bb91b1a1957cd2dda8fc15a49
     public String getNom_unite() {
         return nom_unite;
     }

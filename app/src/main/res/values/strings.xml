@@ -20,7 +20,11 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+<<<<<<< HEAD
  <string name="title_nav_account">Account</string>
+=======
+    <string name="title_nav_account">Account</string>
+>>>>>>> afd237bea4bd670bb91b1a1957cd2dda8fc15a49
     <string name="title_register_activity">REGISTER</string>
     <string name="hint_register_name">Name</string>
     <string name="hint_register_email">Email</string>

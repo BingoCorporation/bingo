@@ -3,7 +3,11 @@ package com.bingo.bingo.models;
 import java.util.Date;
 
 /**
+<<<<<<< HEAD
  * Created by PJS on 8/25/2017.
+=======
+ * Created by Ebillson GJ on 8/24/2017.
+>>>>>>> afd237bea4bd670bb91b1a1957cd2dda8fc15a49
  */
 
 public class entreprise {
@@ -18,8 +22,11 @@ public class entreprise {
     public entreprise() {
     }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> afd237bea4bd670bb91b1a1957cd2dda8fc15a49
     public String getAdresseEntreprise() {
         return adresseEntreprise;
     }
@@ -59,6 +66,9 @@ public class entreprise {
     public void setCreated(Date created) {
         this.created = created;
     }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> afd237bea4bd670bb91b1a1957cd2dda8fc15a49
 }

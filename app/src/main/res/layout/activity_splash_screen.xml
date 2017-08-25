@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.bingo.bingo.activities.SplashScreenActivity">
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@android:color/background_light"
+  tools:context="com.bingo.bingo.activities.SplashScreenActivity">
+
+
+  <ImageView
+    android:id="@+id/imageView2"
+    android:layout_width="300dp"
+    android:layout_height="150dp"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="191dp"
+    android:adjustViewBounds="true"
+    android:background="@android:color/background_light"
+    android:cropToPadding="true"
+    android:scaleType="fitCenter"
+    app:srcCompat="@drawable/bingo_logo" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -12,7 +27,7 @@
         android:layout_centerInParent="true"
         android:text="@string/title_splash_screen"
         android:textColor="@android:color/holo_green_dark"
-        android:textSize="50dp"
+        android:textSize="50sp"
         android:textStyle="bold"
         android:id="@+id/tvAppName" />
 
@@ -22,7 +37,7 @@
         android:layout_height="wrap_content"
         android:text="@string/motto_splash_screen"
         android:textColor="@color/holo_green_dark"
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:gravity="center_horizontal"
         android:layout_marginTop="43dp"
         android:layout_below="@+id/tvAppName"

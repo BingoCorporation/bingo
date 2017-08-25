@@ -11,9 +11,9 @@ public class produits {
 
     public Boolean etat_produit;
     public Categories_produits id_categorie;
-    public  Unite id_unite;
-    public  String nom_produit;
-    public  Double prix_prod;
+    public Unite id_unite;
+    public String nom_produit;
+    public Double prix_prod;
     public Date created;
     public String objectId;
 
