@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Bingo</string>
+
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="txt_Login">Sign in</string>
+    <string name="forget_password">Forgot your password ?</string>
+    <string name="title_first_fragment">Find a business or a service</string>
+    <string name="title_second_fragment">Add a business</string>
+    <string name="title_third_fragment">Settings</string>
+    <string name="title_fourth_fragment">About us</string>
+    <string name="title_splash_screen">Bingo!</string>
+    <string name="motto_splash_screen">\"Where you find what you need\"</string>
+    <string name="account_profile">Profile</string>
+    <string name="account_logout">Log out</string>
+    <string name="account_history">History of services</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_nav_account">Account</string>
+    <string name="title_register_activity">REGISTER</string>
+    <string name="hint_register_name">Name</string>
+    <string name="hint_register_email">Email</string>
+    <string name="hint_register_password">Password</string>
+    <string name="hint_confirm_password">Confirm Password</string>
+    <string name="hint_register_telephone">Phone</string>
+    <string name="txt_create_account">Create Account</string>
+    <string name="hint_signin_username">Username</string>
+    <string name="hint_signin_password">Password</string>
+    <string name="txt_signin_showpassword">Show Password</string>
+    <string name="txt_signin_forgotpassword">Forgot your password ?</string>
+    <string name="txt_signin_createaccount">Sign Up</string>
+    <string name="txt_navheader">Welcome to Bingo</string>
+    <string name="hint_business_name">Name</string>
+    <string name="hint_business_adress">Adress</string>
+    <string name="hint_business_phone">Phone</string>
+    <string name="hint_business_email">Email</string>
+
+
+</resources>
