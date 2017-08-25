@@ -14,7 +14,6 @@ public class Users {
     public String name;
     public String password;
     public String telephone;
-
     public Date created;
     public String objectId;
 
