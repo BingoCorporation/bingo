@@ -7,7 +7,7 @@ android {
         applicationId "com.bingo.bingo"
         //Adding Vector Drawable Library
         vectorDrawables.useSupportLibrary = true
-        minSdkVersion 19
+        minSdkVersion 16
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
