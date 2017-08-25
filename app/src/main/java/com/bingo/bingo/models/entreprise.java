@@ -22,11 +22,6 @@ public class entreprise {
     public entreprise() {
     }
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> afd237bea4bd670bb91b1a1957cd2dda8fc15a49
     public String getAdresseEntreprise() {
         return adresseEntreprise;
     }
@@ -66,9 +61,6 @@ public class entreprise {
     public void setCreated(Date created) {
         this.created = created;
     }
-<<<<<<< HEAD
 
 
-=======
->>>>>>> afd237bea4bd670bb91b1a1957cd2dda8fc15a49
 }

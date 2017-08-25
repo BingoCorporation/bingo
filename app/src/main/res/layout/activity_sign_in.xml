@@ -10,7 +10,7 @@
       android:layout_width="match_parent"
       android:layout_height="100dp"
       android:layout_marginTop="39dp"
-        android:orientation="vertical"
+      android:orientation="vertical"
         android:gravity="center">
 
 
@@ -20,8 +20,7 @@
         android:layout_height="33dp"
         android:background="@color/holo_green_dark"
         app:srcCompat="@drawable/entete"
-          android:gravity="center"
-          />
+          android:gravity="center"/>
 
 
     </LinearLayout>
@@ -75,16 +74,6 @@
             android:textColorHint="@color/holo_green_dark" />
         </android.support.design.widget.TextInputLayout>
 
-      <CheckBox
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="@string/txt_signin_showpassword" />
-
-      <LinearLayout
-            android:textColorHint="@color/holo_green_dark"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"/>
 
         <CheckBox
             android:id="@+id/checkboxShowPassword"
@@ -115,7 +104,7 @@
                 android:layout_width="125dp"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_marginLeft="95dp"
+                android:layout_marginLeft="50dp"
                 android:background="@color/holo_green_dark"
                 android:text="@string/txt_signin_createaccount"
                 android:textColor="@android:color/white" />

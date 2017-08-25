@@ -2,14 +2,9 @@
 <resources>
     <color name="colorPrimary">#213cd4</color>
     <color name="colorPrimaryDark">#303F9F</color>
-<<<<<<< HEAD
     <color name="colorAccent">#FF4081</color>
-    <color name="holo_green_dark">#ff669900</color>
-=======
     <color name="colorAccent1">#FF4081</color>
-    <color name="colorAccent">#ff669900</color>
     <color name="holo_green_dark">#669900</color>
->>>>>>> afd237bea4bd670bb91b1a1957cd2dda8fc15a49
     <color name="color_facebook">#3b5998</color>
     <color name="color_twitter"> #00aced</color>
 </resources>
