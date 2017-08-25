@@ -2,6 +2,7 @@ package com.bingo.bingo.activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -64,6 +65,8 @@ public class CreateAccountActivity extends AppCompatActivity {
                     @Override
                     public void handleFault(BackendlessFault fault) {
                         Toast.makeText(CreateAccountActivity.this, "Register Failed" + fault.getCode(), Toast.LENGTH_LONG).show();
+                        Log.d("LOGIN", fault.getMessage());
+                        Log.d("LOGIN", fault.getDetail());
                     }
                 });
             }

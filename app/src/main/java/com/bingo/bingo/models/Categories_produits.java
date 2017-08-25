@@ -8,7 +8,7 @@ import java.util.Date;
 
 public class Categories_produits {
 
-    public Users id_entreprise;
+    public entreprise entrepriseId;
     public String nom_categorie;
     public Date created;
     public String objectId;
@@ -16,13 +16,12 @@ public class Categories_produits {
     public Categories_produits(){}
 
 
-
-    public Users getId_entreprise() {
-        return id_entreprise;
+    public entreprise getEntrepriseId() {
+        return entrepriseId;
     }
 
-    public void setId_entreprise(Users id_entreprise) {
-        this.id_entreprise = id_entreprise;
+    public void setEntrepriseId(entreprise entrepriseId) {
+        this.entrepriseId = entrepriseId;
     }
 
     public String getNom_categorie() {

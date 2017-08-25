@@ -8,21 +8,21 @@ import java.util.Date;
 
 public class Unite {
 
-    public Users id_entreprise;
+
+    public entreprise entrepriseId;
     public String nom_unite;
     public Date created;
 
     public Unite() {
     }
 
-    public Users getId_entreprise() {
-        return id_entreprise;
+    public entreprise getEntrepriseId() {
+        return entrepriseId;
     }
 
-    public void setId_entreprise(Users id_entreprise) {
-        this.id_entreprise = id_entreprise;
+    public void setEntrepriseId(entreprise entrepriseId) {
+        this.entrepriseId = entrepriseId;
     }
-
     public String getNom_unite() {
         return nom_unite;
     }

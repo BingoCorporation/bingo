@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.bingo.bingo.activities.CreateAccountActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 <LinearLayout
     android:orientation="vertical"
     android:layout_marginTop="20dp"
@@ -51,6 +54,25 @@
             android:textColorHint="@color/holo_green_dark"
             android:backgroundTint="@color/holo_green_dark"/>
         <EditText
+            android:id="@+id/etadresse"
+            android:layout_width="match_parent"
+            android:hint="Adresse"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="20dp"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/holo_green_dark"
+            android:backgroundTint="@color/holo_green_dark"/>
+        <EditText
+            android:id="@+id/ettelephone"
+            android:layout_width="match_parent"
+            android:hint="Phone number"
+            android:inputType="phone"
+            android:layout_marginBottom="20dp"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/holo_green_dark"
+            android:backgroundTint="@color/holo_green_dark"/>
+
+        <EditText
             android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:hint="Password"
@@ -68,25 +90,8 @@
             android:layout_height="wrap_content"
             android:textColorHint="@color/holo_green_dark"
             android:backgroundTint="@color/holo_green_dark"/>
-        <EditText
-            android:id="@+id/ettelephone"
-            android:layout_width="match_parent"
-            android:hint="Phone"
-            android:inputType="textPersonName"
-            android:layout_marginBottom="20dp"
-            android:layout_height="wrap_content"
-            android:textColorHint="@color/holo_green_dark"
-            android:backgroundTint="@color/holo_green_dark"/>
 
-        <EditText
-            android:id="@+id/etadresse"
-            android:layout_width="match_parent"
-            android:hint="Adresse"
-            android:inputType="textPersonName"
-            android:layout_marginBottom="20dp"
-            android:layout_height="wrap_content"
-            android:textColorHint="@color/holo_green_dark"
-            android:backgroundTint="@color/holo_green_dark"/>
+
 
         <Button
             android:id="@+id/btn_register"
@@ -101,5 +106,5 @@
             android:textColor="@android:color/white"
             />
     </LinearLayout>
-
-</RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

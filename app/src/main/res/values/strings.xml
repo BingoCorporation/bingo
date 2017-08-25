@@ -20,6 +20,24 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+ <string name="title_nav_account">Account</string>
+    <string name="title_register_activity">REGISTER</string>
+    <string name="hint_register_name">Name</string>
+    <string name="hint_register_email">Email</string>
+    <string name="hint_register_password">Password</string>
+    <string name="hint_confirm_password">Confirm Password</string>
+    <string name="hint_register_telephone">Phone</string>
+    <string name="txt_create_account">Create Account</string>
+    <string name="hint_signin_username">Username</string>
+    <string name="hint_signin_password">Password</string>
+    <string name="txt_signin_showpassword">Show Password</string>
+    <string name="txt_signin_forgotpassword">Forgot your password ?</string>
+    <string name="txt_signin_createaccount">Sign Up</string>
+    <string name="txt_navheader">Welcome to Bingo</string>
+    <string name="hint_business_name">Name</string>
+    <string name="hint_business_adress">Adress</string>
+    <string name="hint_business_phone">Phone</string>
+    <string name="hint_business_email">Email</string>
 
 
 </resources>
