@@ -20,4 +20,27 @@
     android:cropToPadding="true"
     android:scaleType="fitCenter"
     app:srcCompat="@drawable/bingo_logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/title_splash_screen"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:id="@+id/tvAppName" />
+
+    <TextView
+        android:id="@+id/tvMotto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/motto_splash_screen"
+        android:textColor="@color/holo_green_dark"
+        android:textSize="25sp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="43dp"
+        android:layout_below="@+id/tvAppName"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>
