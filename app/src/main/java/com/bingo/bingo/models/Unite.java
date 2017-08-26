@@ -27,8 +27,6 @@ public class Unite {
     }
 
 
-
-
     public String getNom_unite() {
         return nom_unite;
     }
