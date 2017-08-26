@@ -12,6 +12,7 @@ public class entreprise {
     public String emailEntreprise;
     public String nomEntreprise;
     public String phoneEntreprise;
+    public String imageEntreprise;
     public Date created;
 
 
@@ -48,6 +49,14 @@ public class entreprise {
 
     public void setPhoneEntreprise(String phoneEntreprise) {
         this.phoneEntreprise = phoneEntreprise;
+    }
+
+    public String getImageEntreprise() {
+        return imageEntreprise;
+    }
+
+    public void setImageEntreprise(String imageEntreprise) {
+        this.imageEntreprise = imageEntreprise;
     }
 
     public Date getCreated() {
