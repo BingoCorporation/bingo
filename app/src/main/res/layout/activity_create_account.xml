@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.bingo.bingo.activities.CreateAccountActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 <LinearLayout
     android:orientation="vertical"
-    android:layout_marginTop="60dp"
-    android:layout_marginBottom="20dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="5dp"
     android:id="@+id/linearhead"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -30,7 +33,7 @@
         android:layout_below="@+id/linearhead"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_margin="10dp"
         android:orientation="vertical">
 
         <EditText
@@ -52,43 +55,56 @@
             android:textColorHint="@color/holo_green_dark" />
 
         <EditText
-            android:id="@+id/etPassword"
+            android:id="@+id/etadresse"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:hint="Adresse"
+            android:inputType="textPersonName"
             android:layout_marginBottom="20dp"
-            android:hint="@string/hint_register_password"
-            android:inputType="textPassword"
-            android:textColorHint="@color/holo_green_dark" />
-
-        <EditText
-            android:id="@+id/etconfirmpassword"
-            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:hint="@string/hint_confirm_password"
-            android:inputType="textPassword"
             android:textColorHint="@color/holo_green_dark" />
 
         <EditText
             android:id="@+id/ettelephone"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:hint="@string/hint_register_telephone"
+            android:hint="Phone number"
             android:inputType="phone"
+            android:layout_marginBottom="20dp"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/holo_green_dark"
+            android:backgroundTint="@color/holo_green_dark"/>
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:layout_marginBottom="20dp"
+            android:layout_height="wrap_content"
             android:textColorHint="@color/holo_green_dark" />
 
+        <EditText
+            android:id="@+id/etconfirmpassword"
+            android:layout_width="match_parent"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:layout_marginBottom="20dp"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/holo_green_dark"
+            android:backgroundTint="@color/holo_green_dark"/>
+
+
         <Button
-            android:id="@+id/btn_create"
+            android:id="@+id/btn_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/etPassword"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:background="@color/holo_green_dark"
-            android:onClick="onCreate"
-            android:text="@string/txt_create_account"
-            android:textColor="@android:color/white" />
+            android:text="Create Account"
+            android:onClick="onSignIn"
+            android:textColor="@android:color/white"
+            />
     </LinearLayout>
-
-</RelativeLayout>
+    </RelativeLayout>
+</ScrollView>
