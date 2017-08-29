@@ -9,7 +9,7 @@ import java.util.Date;
 public class Unite {
 
 
-    public entreprise entrepriseId;
+    public Entreprise entrepriseId;
     public String nom_unite;
     public Date created;
 
@@ -18,11 +18,11 @@ public class Unite {
     public Unite() {
     }
 
-    public entreprise getEntrepriseId() {
+    public Entreprise getEntrepriseId() {
         return entrepriseId;
     }
 
-    public void setEntrepriseId(entreprise entrepriseId) {
+    public void setEntrepriseId(Entreprise entrepriseId) {
         this.entrepriseId = entrepriseId;
     }
 

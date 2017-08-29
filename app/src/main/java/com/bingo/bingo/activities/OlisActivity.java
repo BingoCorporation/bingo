@@ -7,7 +7,7 @@ import android.widget.ListView;
 
 import com.bingo.bingo.R;
 import com.bingo.bingo.adapters.CustomProduitsAdapter;
-import com.bingo.bingo.models.produits;
+import com.bingo.bingo.models.Produits;
 
 import java.util.ArrayList;
 
@@ -33,7 +33,7 @@ public class OlisActivity extends AppCompatActivity {
 
     private void populateProduitsList(){
         // Construct the data source
-        ArrayList<produits> produitsArrayList= produits.getProduits();
+        ArrayList<Produits> produitsArrayList= Produits.getProduits();
         // Create the adapter to convert the array to views
         CustomProduitsAdapter adapter = new CustomProduitsAdapter(this, produitsArrayList);
         // Attach the adapter to a ListView
