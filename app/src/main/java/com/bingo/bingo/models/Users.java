@@ -10,7 +10,7 @@ public class Users {
 
     public String adresse ;
     public String email;
-    public String image;
+    public String imageProfile;
     public String name;
     public String password;
     public String telephone;
@@ -36,12 +36,13 @@ public class Users {
         this.email = email;
     }
 
-    public String getImage() {
-        return image;
+
+    public String getImageProfile() {
+        return imageProfile;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setImageProfile(String imageProfile) {
+        this.imageProfile = imageProfile;
     }
 
     public String getName() {

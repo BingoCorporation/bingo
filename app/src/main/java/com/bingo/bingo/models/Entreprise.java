@@ -10,17 +10,20 @@ import java.util.Date;
 >>>>>>> afd237bea4bd670bb91b1a1957cd2dda8fc15a49
  */
 
-public class entreprise {
+public class Entreprise {
 
+    public Categories_produits categorieId;
+    public Users userId;
+    public String imageEntreprise;
+    public String nomEntreprise;
     public String adresseEntreprise;
     public String emailEntreprise;
-    public String nomEntreprise;
     public String phoneEntreprise;
-    public String imageEntreprise;
     public Date created;
 
 
-    public entreprise() {
+
+    public Entreprise() {
     }
 
     public String getAdresseEntreprise() {

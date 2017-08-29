@@ -7,20 +7,20 @@ import java.util.Date;
  * Created by Ebillson GJ on 8/19/2017.
  */
 
-public class produits {
+public class Produits {
 
     public Boolean etat_produit;
-    public Categories_produits id_categorie;
-    public Unite id_unite;
+    public Categories_produits categorieId;
+    public Unite uniteId;
     public String nom_produit;
     public Double prix_prod;
     public Date created;
     public String objectId;
 
 
-    public produits(){}
+    public Produits(){}
 
-    public produits(String nom_produit) {
+    public Produits(String nom_produit) {
         this.nom_produit = nom_produit;
     }
 
@@ -32,20 +32,20 @@ public class produits {
         this.etat_produit = etat_produit;
     }
 
-    public Categories_produits getId_categorie() {
-        return id_categorie;
+    public Categories_produits getCategorieId() {
+        return categorieId;
     }
 
-    public void setId_categorie(Categories_produits id_categorie) {
-        this.id_categorie = id_categorie;
+    public void setCategorieId(Categories_produits categorieId) {
+        this.categorieId = categorieId;
     }
 
-    public Unite getId_unite() {
-        return id_unite;
+    public Unite getUniteId() {
+        return uniteId;
     }
 
-    public void setId_unite(Unite id_unite) {
-        this.id_unite = id_unite;
+    public void setUniteId(Unite uniteId) {
+        this.uniteId = uniteId;
     }
 
     public String getNom_produit() {
@@ -84,14 +84,14 @@ public class produits {
 
 
 
-    public static ArrayList<produits>getProduits(){
+    public static ArrayList<Produits>getProduits(){
 
-        ArrayList<produits> produits = new ArrayList<>();
-        produits.add(new produits("Pizzas"));
-        produits.add(new produits("Subs"));
-        produits.add(new produits("Cremes a la glace"));
-        produits.add(new produits("Autres"));
-        return produits;
+        ArrayList<Produits> Produits = new ArrayList<>();
+        Produits.add(new Produits("Pizzas"));
+        Produits.add(new Produits("Subs"));
+        Produits.add(new Produits("Cremes a la glace"));
+        Produits.add(new Produits("Autres"));
+        return Produits;
 
     }
 }
