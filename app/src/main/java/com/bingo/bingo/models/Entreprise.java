@@ -26,6 +26,23 @@ public class Entreprise {
     public Entreprise() {
     }
 
+
+    public Categories_produits getCategorieId() {
+        return categorieId;
+    }
+
+    public void setCategorieId(Categories_produits categorieId) {
+        this.categorieId = categorieId;
+    }
+
+    public Users getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Users userId) {
+        this.userId = userId;
+    }
+
     public String getAdresseEntreprise() {
         return adresseEntreprise;
     }
