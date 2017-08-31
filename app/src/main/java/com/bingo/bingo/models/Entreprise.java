@@ -1,5 +1,6 @@
 package com.bingo.bingo.models;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -26,6 +27,11 @@ public class Entreprise {
     public Entreprise() {
     }
 
+    public Entreprise(String nomEntreprise, String adresseEntreprise, String imageEntreprise) {
+        this.nomEntreprise = nomEntreprise;
+        this.adresseEntreprise = adresseEntreprise;
+        this.imageEntreprise = imageEntreprise;
+    }
 
     public Categories_produits getCategorieId() {
         return categorieId;
@@ -89,6 +95,32 @@ public class Entreprise {
 
     public void setCreated(Date created) {
         this.created = created;
+    }
+
+
+
+
+
+
+    public static ArrayList<Entreprise> getEntreprise(){
+
+        ArrayList<Entreprise> Entreprise = new ArrayList<>();
+        Entreprise.add(new Entreprise("Oli's Turgeau","Turgeau","https://develop.backendless.com/6489B38C-DCC1-9240-FF77-984DC15FAB00/console/gkblvphjyhannobwqgljgbqofmhjdozwzfrc/files/view/businessImages/download.png"));
+        Entreprise.add(new Entreprise("Oli's PV","Petion-Ville","https://develop.backendless.com/6489B38C-DCC1-9240-FF77-984DC15FAB00/console/gkblvphjyhannobwqgljgbqofmhjdozwzfrc/files/view/businessImages/download.png"));
+        Entreprise.add(new Entreprise("Dominoes","Turgeau","https://develop.backendless.com/6489B38C-DCC1-9240-FF77-984DC15FAB00/console/gkblvphjyhannobwqgljgbqofmhjdozwzfrc/files/view/businessImages/download.png"));
+        Entreprise.add(new Entreprise("Kokoye Delmas","Delmas","https://develop.backendless.com/6489B38C-DCC1-9240-FF77-984DC15FAB00/console/gkblvphjyhannobwqgljgbqofmhjdozwzfrc/files/view/businessImages/download.png"));
+
+        Entreprise.add(new Entreprise("Kokoye PV","Petion-Ville","https://develop.backendless.com/6489B38C-DCC1-9240-FF77-984DC15FAB00/console/gkblvphjyhannobwqgljgbqofmhjdozwzfrc/files/view/businessImages/download.png"));
+        Entreprise.add(new Entreprise("Rekreation","Turgeau","https://develop.backendless.com/6489B38C-DCC1-9240-FF77-984DC15FAB00/console/gkblvphjyhannobwqgljgbqofmhjdozwzfrc/files/view/businessImages/download.png"));
+        Entreprise.add(new Entreprise("Prestige","Turgeau","https://develop.backendless.com/6489B38C-DCC1-9240-FF77-984DC15FAB00/console/gkblvphjyhannobwqgljgbqofmhjdozwzfrc/files/view/businessImages/download.png"));
+        Entreprise.add(new Entreprise("Muncheez Bois Verna","Bois Verna","https://develop.backendless.com/6489B38C-DCC1-9240-FF77-984DC15FAB00/console/gkblvphjyhannobwqgljgbqofmhjdozwzfrc/files/view/businessImages/download.png"));
+        Entreprise.add(new Entreprise("Muncheez PV","Petion-Ville","https://develop.backendless.com/6489B38C-DCC1-9240-FF77-984DC15FAB00/console/gkblvphjyhannobwqgljgbqofmhjdozwzfrc/files/view/businessImages/download.png"));
+
+        Entreprise.add(new Entreprise("Delice ","Petion-Ville","https://develop.backendless.com/6489B38C-DCC1-9240-FF77-984DC15FAB00/console/gkblvphjyhannobwqgljgbqofmhjdozwzfrc/files/view/businessImages/download.png"));
+
+
+        return Entreprise;
+
     }
 
 

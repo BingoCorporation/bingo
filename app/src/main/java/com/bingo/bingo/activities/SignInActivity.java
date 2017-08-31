@@ -23,7 +23,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 public class SignInActivity extends AppCompatActivity {
 
        // CheckBox checkpass;
-    String SERVER_CLIENT_ID="737268983278-icssnq1b369kecbb7f2eol64940cbhlk.apps.googleusercontent.com";
+    String SERVER_CLIENT_ID ="737268983278-icssnq1b369kecbb7f2eol64940cbhlk.apps.googleusercontent.com";
     GoogleSignInOptions gSignInOptions;
     public static final String App_ID="6489B38C-DCC1-9240-FF77-984DC15FAB00";
     public static final String Secret_Key="D8D8428D-0D09-2B26-FFDB-0CB665428700";
