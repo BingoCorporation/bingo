@@ -4,6 +4,7 @@ package com.bingo.bingo.fragments;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,18 +12,27 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.backendless.Backendless;
+import com.backendless.IDataStore;
+import com.backendless.async.callback.AsyncCallback;
+import com.backendless.exceptions.BackendlessFault;
 import com.bingo.bingo.R;
 import com.bingo.bingo.activities.OlisActivity;
 import com.bingo.bingo.adapters.CustomEntrepriseAdapter;
 import com.bingo.bingo.models.Entreprise;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class FindStoreFragment extends Fragment {
 
+    ListView lvEntreprise;
+    ArrayList<Entreprise> listEntreprise;
+    CustomEntrepriseAdapter adapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -32,11 +42,28 @@ public class FindStoreFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_find_store, container, false);
 
-        ListView listView = (ListView) view.findViewById(R.id.lvEntreprise);
-        ArrayList<Entreprise> arrayOfEntreprise = Entreprise.getEntreprise();
-        CustomEntrepriseAdapter adapter = new CustomEntrepriseAdapter(getActivity(), arrayOfEntreprise);
-        listView.setAdapter(adapter);
+        lvEntreprise = (ListView) view.findViewById(R.id.lvEntreprise);
+        listEntreprise = new ArrayList<>();
+        adapter = new CustomEntrepriseAdapter(getContext(), listEntreprise);
+        lvEntreprise.setAdapter(adapter);
 
+
+        IDataStore<Map> entrepriseStorage = Backendless.Data.of("Entreprise");
+
+        entrepriseStorage.find(new AsyncCallback<List<Map>>() {
+            @Override
+            public void handleResponse(List<Map> response) {
+                adapter.addAll(Entreprise.fromListMap(response));
+
+            }
+
+            @Override
+            public void handleFault(BackendlessFault fault) {
+                Log.d("DEBUG", fault.getCode());
+                Toast.makeText(getContext(), fault.getMessage(), Toast.LENGTH_SHORT).show();
+
+            }
+        });
 
 
         /*String[] businessList = {"Oli's", "Dominoes","Epi d'or","Marriott","Delimart","La Pleiade",
@@ -45,7 +72,7 @@ public class FindStoreFragment extends Fragment {
         ArrayAdapter<String> listViewAdapter =  new ArrayAdapter<>(getActivity(),android.R.layout.simple_list_item_1, businessList);
         listView.setAdapter(listViewAdapter);*/
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        lvEntreprise.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (position == 0){

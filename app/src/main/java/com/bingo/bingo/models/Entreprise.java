@@ -2,6 +2,8 @@ package com.bingo.bingo.models;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+import java.util.Map;
 
 /**
 <<<<<<< HEAD
@@ -102,7 +104,7 @@ public class Entreprise {
 
 
 
-    public static ArrayList<Entreprise> getEntreprise(){
+   /* public static ArrayList<Entreprise> getEntreprise(){
 
         ArrayList<Entreprise> Entreprise = new ArrayList<>();
         Entreprise.add(new Entreprise("Oli's Turgeau","Turgeau","https://develop.backendless.com/6489B38C-DCC1-9240-FF77-984DC15FAB00/console/gkblvphjyhannobwqgljgbqofmhjdozwzfrc/files/view/businessImages/download.png"));
@@ -121,7 +123,30 @@ public class Entreprise {
 
         return Entreprise;
 
+    }*/
+
+    public static ArrayList<Entreprise> fromListMap(List<Map> map){
+
+        ArrayList<Entreprise> listeEntreprise = new ArrayList<>();
+
+        for(int i = 0; i<map.size(); i++){
+
+            Entreprise ent = new Entreprise();
+
+            ent.setNomEntreprise((String)map.get(i).get("nomEntreprise"));
+            ent.setAdresseEntreprise((String) map.get(i).get("adresseEntreprise"));
+            ent.setImageEntreprise((String) map.get(i).get("imageEntreprise"));
+
+            listeEntreprise.add(ent);
+
+
+        }
+
+        return  listeEntreprise;
+
     }
-
-
 }
+
+
+
+

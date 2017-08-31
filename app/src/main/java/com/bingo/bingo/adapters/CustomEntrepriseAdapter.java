@@ -5,10 +5,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bingo.bingo.R;
 import com.bingo.bingo.models.Entreprise;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -24,6 +26,7 @@ public class CustomEntrepriseAdapter extends ArrayAdapter<Entreprise> {
     private static class ViewHolder {
         TextView tvEntrepriseName;
         TextView tvEntrepriseAdresse;
+        ImageView ivEntreprise;
     }
 
 
@@ -54,6 +57,7 @@ public class CustomEntrepriseAdapter extends ArrayAdapter<Entreprise> {
 
             viewHolder.tvEntrepriseName = (TextView) convertView.findViewById(R.id.tvEntrepriseName);
             viewHolder.tvEntrepriseAdresse = (TextView) convertView.findViewById(R.id.tvEntrepriseAdresse);
+            viewHolder.ivEntreprise = (ImageView) convertView.findViewById(R.id.ivEntreprise);
             // Cache the viewHolder object inside the fresh view
             convertView.setTag(viewHolder);
 
@@ -66,6 +70,9 @@ public class CustomEntrepriseAdapter extends ArrayAdapter<Entreprise> {
         // into the template view.
         viewHolder.tvEntrepriseName.setText(entreprise.nomEntreprise);
         viewHolder.tvEntrepriseAdresse.setText(entreprise.adresseEntreprise);
+        Picasso.with(getContext()).load(entreprise.getImageEntreprise()).into(viewHolder.ivEntreprise);
+
+
         // Return the completed view to render on screen
         return convertView;
 
