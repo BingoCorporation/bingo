@@ -2,6 +2,8 @@ package com.bingo.bingo.models;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Ebillson GJ on 8/19/2017.
@@ -84,7 +86,7 @@ public class Produits {
 
 
 
-    public static ArrayList<Produits>getProduits(){
+    /*public static ArrayList<Produits>getProduits(){
 
         ArrayList<Produits> Produits = new ArrayList<>();
         Produits.add(new Produits("Pizzas"));
@@ -92,6 +94,27 @@ public class Produits {
         Produits.add(new Produits("Cremes a la glace"));
         Produits.add(new Produits("Autres"));
         return Produits;
+
+    }*/
+
+    public  static ArrayList<Produits> fromListMap(List<Map> map) {
+
+        ArrayList<Produits> listeProduit = new ArrayList<>();
+
+        for(int i = 0; i<map.size(); i++){
+
+            Produits prod = new Produits();
+
+            prod.setNom_produit((String)map.get(i).get("nom_produit"));
+            prod.setPrix_prod((Double) map.get(i).get("prix_prod"));
+            prod.setEtat_produit((Boolean) map.get(i).get("etat_produit"));
+
+            listeProduit.add(prod);
+
+
+        }
+
+        return  listeProduit;
 
     }
 }
