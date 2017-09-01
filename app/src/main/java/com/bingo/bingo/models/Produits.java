@@ -26,6 +26,7 @@ public class Produits {
         this.nom_produit = nom_produit;
     }
 
+
     public Boolean getEtat_produit() {
         return etat_produit;
     }
@@ -106,8 +107,8 @@ public class Produits {
             Produits prod = new Produits();
 
             prod.setNom_produit((String)map.get(i).get("nom_produit"));
-            prod.setPrix_prod((Double) map.get(i).get("prix_prod"));
-            prod.setEtat_produit((Boolean) map.get(i).get("etat_produit"));
+            prod.setPrix_prod((Double)map.get(i).get("prix_prod"));
+           // prod.setEtat_produit((Boolean) map.get(i).get("etat_produit"));
 
             listeProduit.add(prod);
 
