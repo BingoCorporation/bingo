@@ -102,24 +102,29 @@ public class SignInActivity extends AppCompatActivity {
 
     }
 
-        public  void onSignIn(android.view.View view){
-            String Username= username.getText().toString();
-            String Password=password.getText().toString();
-            Backendless.UserService.login(Username, Password, new AsyncCallback<BackendlessUser>() {
-                @Override
-                public void handleResponse(BackendlessUser response) {
-                    Toast.makeText(SignInActivity.this, "Logged in", Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                    startActivity(intent);
-                }
+        public  void onSignIn(android.view.View view) {
+            if (username.getText().equals("") & password.getText().equals("")) {
+                Toast.makeText(SignInActivity.this, "Username or password missing", Toast.LENGTH_LONG).show();
+            } else {
+                String Username = username.getText().toString();
+                String Password = password.getText().toString();
 
-                @Override
-                public void handleFault(BackendlessFault fault) {
-                    Toast.makeText(SignInActivity.this, "Error Logged in", Toast.LENGTH_LONG).show();
-                    Log.d("LOGIN", fault.getMessage());
-                    Log.d("LOGIN", fault.getDetail());
-                }
-            });
+                Backendless.UserService.login(Username, Password, new AsyncCallback<BackendlessUser>() {
+                    @Override
+                    public void handleResponse(BackendlessUser response) {
+                        Toast.makeText(SignInActivity.this, "Logged in", Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        startActivity(intent);
+                    }
+
+                    @Override
+                    public void handleFault(BackendlessFault fault) {
+                        Toast.makeText(SignInActivity.this, "Error Logged in", Toast.LENGTH_LONG).show();
+                        Log.d("LOGIN", fault.getMessage());
+                        Log.d("LOGIN", fault.getDetail());
+                    }
+                });
+            }
         }
     }
 

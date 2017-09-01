@@ -164,5 +164,8 @@ public class MainActivity extends AppCompatActivity {
         mDrawer.closeDrawers();
 
     }
+public void LogOut()
+{
 
+}
 }
