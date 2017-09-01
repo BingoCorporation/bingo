@@ -126,13 +126,6 @@ public class FindStoreFragment extends Fragment {
         // Inflate the layout for this fragment
        // return inflater.inflate(R.layout.fragment_find_store, container, false);
 
-
-
         return view;
     }
-
-
-
-
-
 }

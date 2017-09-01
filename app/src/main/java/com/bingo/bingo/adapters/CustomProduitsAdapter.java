@@ -22,16 +22,14 @@ public class CustomProduitsAdapter extends ArrayAdapter<Produits> {
     // View lookup cache
     private static class ViewHolder {
         TextView nomProduit;
+        TextView prixProduit;
+       // TextView etatProduit;
 
     }
 
     public CustomProduitsAdapter(Context context, ArrayList<Produits> Produits) {
         super(context, 0, Produits);
     }
-
-
-
-
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -53,6 +51,8 @@ public class CustomProduitsAdapter extends ArrayAdapter<Produits> {
             //convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_produits, parent, false);
 
             viewHolder.nomProduit = (TextView) convertView.findViewById(R.id.tvProduitsOlis);
+            viewHolder.prixProduit = (TextView)convertView.findViewById(R.id.tvPrixProd);
+            //viewHolder.etatProduit = (TextView)convertView.findViewById(R.id.tvEtatProduit);
 
             // Cache the viewHolder object inside the fresh view
             convertView.setTag(viewHolder);
@@ -66,6 +66,8 @@ public class CustomProduitsAdapter extends ArrayAdapter<Produits> {
         // Populate the data from the data object via the viewHolder object
         // into the template view.
         viewHolder.nomProduit.setText(Produits.nom_produit);
+        viewHolder.prixProduit.setText(Produits.prix_prod+ " ");
+       // viewHolder.etatProduit.setText(Produits.etat_produit);
         // Return the completed view to render on screen
         return convertView;
 
@@ -79,10 +81,5 @@ public class CustomProduitsAdapter extends ArrayAdapter<Produits> {
         // Return the completed view to render on screen
         return convertView;*/
     }
-
-
-
-
-
 
 }
