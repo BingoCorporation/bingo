@@ -15,10 +15,11 @@ import java.util.Map;
 
 public class Entreprise {
 
-    public Categories_produits categorieId;
+    public CategorieProduit categorieProduitId;
     public Users userId;
     public String imageEntreprise;
     public String nomEntreprise;
+    public String descriptionEntreprise;
     public String adresseEntreprise;
     public String emailEntreprise;
     public String phoneEntreprise;
@@ -29,18 +30,12 @@ public class Entreprise {
     public Entreprise() {
     }
 
-    public Entreprise(String nomEntreprise, String adresseEntreprise, String imageEntreprise) {
-        this.nomEntreprise = nomEntreprise;
-        this.adresseEntreprise = adresseEntreprise;
-        this.imageEntreprise = imageEntreprise;
+    public CategorieProduit getCategorieProduitId() {
+        return categorieProduitId;
     }
 
-    public Categories_produits getCategorieId() {
-        return categorieId;
-    }
-
-    public void setCategorieId(Categories_produits categorieId) {
-        this.categorieId = categorieId;
+    public void setCategorieProduitId(CategorieProduit categorieProduitId) {
+        this.categorieProduitId = categorieProduitId;
     }
 
     public Users getUserId() {
@@ -49,6 +44,30 @@ public class Entreprise {
 
     public void setUserId(Users userId) {
         this.userId = userId;
+    }
+
+    public String getImageEntreprise() {
+        return imageEntreprise;
+    }
+
+    public void setImageEntreprise(String imageEntreprise) {
+        this.imageEntreprise = imageEntreprise;
+    }
+
+    public String getNomEntreprise() {
+        return nomEntreprise;
+    }
+
+    public void setNomEntreprise(String nomEntreprise) {
+        this.nomEntreprise = nomEntreprise;
+    }
+
+    public String getDescriptionEntreprise() {
+        return descriptionEntreprise;
+    }
+
+    public void setDescriptionEntreprise(String descriptionEntreprise) {
+        this.descriptionEntreprise = descriptionEntreprise;
     }
 
     public String getAdresseEntreprise() {
@@ -67,28 +86,12 @@ public class Entreprise {
         this.emailEntreprise = emailEntreprise;
     }
 
-    public String getNomEntreprise() {
-        return nomEntreprise;
-    }
-
-    public void setNomEntreprise(String nomEntreprise) {
-        this.nomEntreprise = nomEntreprise;
-    }
-
     public String getPhoneEntreprise() {
         return phoneEntreprise;
     }
 
     public void setPhoneEntreprise(String phoneEntreprise) {
         this.phoneEntreprise = phoneEntreprise;
-    }
-
-    public String getImageEntreprise() {
-        return imageEntreprise;
-    }
-
-    public void setImageEntreprise(String imageEntreprise) {
-        this.imageEntreprise = imageEntreprise;
     }
 
     public Date getCreated() {
@@ -99,31 +102,6 @@ public class Entreprise {
         this.created = created;
     }
 
-
-
-
-
-
-   /* public static ArrayList<Entreprise> getEntreprise(){
-
-        ArrayList<Entreprise> Entreprise = new ArrayList<>();
-        Entreprise.add(new Entreprise("Oli's Turgeau","Turgeau","https://develop.backendless.com/6489B38C-DCC1-9240-FF77-984DC15FAB00/console/gkblvphjyhannobwqgljgbqofmhjdozwzfrc/files/view/businessImages/download.png"));
-        Entreprise.add(new Entreprise("Oli's PV","Petion-Ville","https://develop.backendless.com/6489B38C-DCC1-9240-FF77-984DC15FAB00/console/gkblvphjyhannobwqgljgbqofmhjdozwzfrc/files/view/businessImages/download.png"));
-        Entreprise.add(new Entreprise("Dominoes","Turgeau","https://develop.backendless.com/6489B38C-DCC1-9240-FF77-984DC15FAB00/console/gkblvphjyhannobwqgljgbqofmhjdozwzfrc/files/view/businessImages/download.png"));
-        Entreprise.add(new Entreprise("Kokoye Delmas","Delmas","https://develop.backendless.com/6489B38C-DCC1-9240-FF77-984DC15FAB00/console/gkblvphjyhannobwqgljgbqofmhjdozwzfrc/files/view/businessImages/download.png"));
-
-        Entreprise.add(new Entreprise("Kokoye PV","Petion-Ville","https://develop.backendless.com/6489B38C-DCC1-9240-FF77-984DC15FAB00/console/gkblvphjyhannobwqgljgbqofmhjdozwzfrc/files/view/businessImages/download.png"));
-        Entreprise.add(new Entreprise("Rekreation","Turgeau","https://develop.backendless.com/6489B38C-DCC1-9240-FF77-984DC15FAB00/console/gkblvphjyhannobwqgljgbqofmhjdozwzfrc/files/view/businessImages/download.png"));
-        Entreprise.add(new Entreprise("Prestige","Turgeau","https://develop.backendless.com/6489B38C-DCC1-9240-FF77-984DC15FAB00/console/gkblvphjyhannobwqgljgbqofmhjdozwzfrc/files/view/businessImages/download.png"));
-        Entreprise.add(new Entreprise("Muncheez Bois Verna","Bois Verna","https://develop.backendless.com/6489B38C-DCC1-9240-FF77-984DC15FAB00/console/gkblvphjyhannobwqgljgbqofmhjdozwzfrc/files/view/businessImages/download.png"));
-        Entreprise.add(new Entreprise("Muncheez PV","Petion-Ville","https://develop.backendless.com/6489B38C-DCC1-9240-FF77-984DC15FAB00/console/gkblvphjyhannobwqgljgbqofmhjdozwzfrc/files/view/businessImages/download.png"));
-
-        Entreprise.add(new Entreprise("Delice ","Petion-Ville","https://develop.backendless.com/6489B38C-DCC1-9240-FF77-984DC15FAB00/console/gkblvphjyhannobwqgljgbqofmhjdozwzfrc/files/view/businessImages/download.png"));
-
-
-        return Entreprise;
-
-    }*/
 
     public static ArrayList<Entreprise> fromListMap(List<Map> map){
 

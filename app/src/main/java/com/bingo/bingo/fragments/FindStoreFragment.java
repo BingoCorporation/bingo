@@ -17,7 +17,7 @@ import com.backendless.IDataStore;
 import com.backendless.async.callback.AsyncCallback;
 import com.backendless.exceptions.BackendlessFault;
 import com.bingo.bingo.R;
-import com.bingo.bingo.activities.OlisActivity;
+import com.bingo.bingo.activities.CategorieProduitActivity;
 import com.bingo.bingo.adapters.CustomEntrepriseAdapter;
 import com.bingo.bingo.models.Entreprise;
 
@@ -66,18 +66,13 @@ public class FindStoreFragment extends Fragment {
         });
 
 
-        /*String[] businessList = {"Oli's", "Dominoes","Epi d'or","Marriott","Delimart","La Pleiade",
-                                 "Tag Market","Olympic Market","Best Western","Hotel Oasis", "Caribbean Market"};
-        ListView listView = (ListView) view.findViewById(R.id.lvBusiness);
-        ArrayAdapter<String> listViewAdapter =  new ArrayAdapter<>(getActivity(),android.R.layout.simple_list_item_1, businessList);
-        listView.setAdapter(listViewAdapter);*/
 
         lvEntreprise.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (position == 0){
 
-                    Intent intent = new Intent(getActivity(), OlisActivity.class);
+                    Intent intent = new Intent(getActivity(), CategorieProduitActivity.class);
                     startActivity(intent);
 
                     Toast.makeText(getActivity(), "Oli's", Toast.LENGTH_SHORT).show();
