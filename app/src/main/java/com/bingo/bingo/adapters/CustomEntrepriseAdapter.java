@@ -73,6 +73,7 @@ public class CustomEntrepriseAdapter extends ArrayAdapter<Entreprise> {
         Picasso.with(getContext()).load(entreprise.getImageEntreprise()).into(viewHolder.ivEntreprise);
 
 
+
         // Return the completed view to render on screen
         return convertView;
 

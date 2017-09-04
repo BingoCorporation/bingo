@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.backendless.Backendless;
@@ -25,6 +26,7 @@ public class CategorieProduitActivity extends AppCompatActivity {
     ArrayList<CategorieProduit> listeCategorieProduit;
     CustomCategorieProduitAdapter categorieProduitAdapter ;
     ListView lvCategorieProduit ;
+    TextView mTitle;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
