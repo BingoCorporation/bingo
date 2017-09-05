@@ -75,7 +75,7 @@ public class FindStoreFragment extends Fragment {
                     Intent intent = new Intent(getActivity(), CategorieProduitActivity.class);
                     startActivity(intent);
 
-                    Toast.makeText(getActivity(), "Oli's", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "La Reserve", Toast.LENGTH_SHORT).show();
 
 
                 }
