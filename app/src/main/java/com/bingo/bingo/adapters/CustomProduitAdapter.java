@@ -5,10 +5,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bingo.bingo.R;
 import com.bingo.bingo.models.Produit;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -23,8 +25,7 @@ public class CustomProduitAdapter extends ArrayAdapter<Produit> {
     private static class ViewHolder {
         TextView nomProduit;
         TextView prixProduit;
-       // TextView etatProduit;
-
+        ImageView ivProduit;
     }
 
     public CustomProduitAdapter(Context context, ArrayList<Produit> produit) {
@@ -52,6 +53,7 @@ public class CustomProduitAdapter extends ArrayAdapter<Produit> {
 
             viewHolder.nomProduit = (TextView) convertView.findViewById(R.id.tvProduitsOlis);
             viewHolder.prixProduit = (TextView)convertView.findViewById(R.id.tvPrixProd);
+            viewHolder.ivProduit = (ImageView) convertView.findViewById(R.id.ivProduitOlis);
             //viewHolder.etatProduit = (TextView)convertView.findViewById(R.id.tvEtatProduit);
 
             // Cache the viewHolder object inside the fresh view
@@ -67,6 +69,8 @@ public class CustomProduitAdapter extends ArrayAdapter<Produit> {
         // into the template view.
         viewHolder.nomProduit.setText(produit.nomProduit);
         viewHolder.prixProduit.setText(produit.prixProduit+ " gdes.");
+        Picasso.with(getContext()).load(produit.getImageProduit()).into(viewHolder.ivProduit);
+
        // viewHolder.etatProduit.setText(Produit.etat_produit);
         // Return the completed view to render on screen
         return convertView;

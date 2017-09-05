@@ -56,7 +56,7 @@ public class CustomEntrepriseAdapter extends ArrayAdapter<Entreprise> {
             // convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_entreprise, parent, false);
 
             viewHolder.tvEntrepriseName = (TextView) convertView.findViewById(R.id.tvEntrepriseName);
-            viewHolder.tvEntrepriseAdresse = (TextView) convertView.findViewById(R.id.tvEntrepriseAdresse);
+           // viewHolder.tvEntrepriseAdresse = (TextView) convertView.findViewById(R.id.tvEntrepriseAdresse);
             viewHolder.ivEntreprise = (ImageView) convertView.findViewById(R.id.ivEntreprise);
             // Cache the viewHolder object inside the fresh view
             convertView.setTag(viewHolder);
@@ -69,7 +69,7 @@ public class CustomEntrepriseAdapter extends ArrayAdapter<Entreprise> {
         // Populate the data from the data object via the viewHolder object
         // into the template view.
         viewHolder.tvEntrepriseName.setText(entreprise.nomEntreprise);
-        viewHolder.tvEntrepriseAdresse.setText(entreprise.adresseEntreprise);
+       // viewHolder.tvEntrepriseAdresse.setText(entreprise.adresseEntreprise);
         Picasso.with(getContext()).load(entreprise.getImageEntreprise()).into(viewHolder.ivEntreprise);
 
 
