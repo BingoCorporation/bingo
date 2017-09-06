@@ -15,13 +15,10 @@
 
 
       <ImageView
-        android:id="@+id/ivEntete"
-        android:layout_width="144dp"
-        android:layout_height="33dp"
-        android:background="@color/holo_green_dark"
-        app:srcCompat="@drawable/entete"
-        android:gravity="center"/>
-
+        android:id="@+id/imageView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/entete" />
     </LinearLayout>
 <ScrollView
     android:layout_width="match_parent"
@@ -43,17 +40,18 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp">
 
-            <EditText
-                android:id="@+id/etUsername"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:ems="10"
-                android:hint="Phone number"
-                android:inputType="phone"
-                android:digits="1234567890"
-                android:textColorHint="@color/holo_green_dark"
-                android:backgroundTint="@color/holo_green_dark"/>
+          <EditText
+            android:id="@+id/etUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/color_facebook"
+            android:digits="1234567890"
+            android:ems="10"
+            android:hint="Phone number"
+            android:inputType="phone"
+            android:textColorHint="@color/color_facebook"
+            android:textColorLink="@color/color_facebook" />
 
         </android.support.design.widget.TextInputLayout>
 
@@ -63,18 +61,20 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp">
 
-            <EditText
-                android:id="@+id/etPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:drawableLeft="@drawable/ic_password"
-                android:ems="10"
-                android:gravity="left|fill"
-                android:hint="@string/hint_signin_password"
-                android:inputType="textPassword"
-                android:textColor="@color/holo_green_dark"
-                android:textColorHint="@color/holo_green_dark" />
+          <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/color_facebook"
+            android:drawableLeft="@drawable/ic_password"
+            android:ems="10"
+            android:gravity="left|fill"
+            android:hint="@string/hint_signin_password"
+            android:inputType="textPassword"
+            android:textColor="@color/color_facebook"
+            android:textColorHint="@color/cardview_light_background"
+            android:textColorLink="@color/color_facebook" />
         </android.support.design.widget.TextInputLayout>
 
 
@@ -84,12 +84,13 @@
             android:layout_height="match_parent"/>
 
 
-        <CheckBox
-            android:id="@+id/checkboxShowPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="@string/txt_signin_showpassword" />
+      <CheckBox
+        android:id="@+id/checkboxShowPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/txt_signin_showpassword"
+        android:textColor="@color/common_google_signin_btn_text_light_default" />
 
         <LinearLayout
             android:id="@+id/llForButtons"
@@ -100,34 +101,37 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-            <Button
+
+              <Button
                 android:id="@+id/btn_signin"
                 android:layout_width="125dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
-                android:background="@color/holo_green_dark"
+                android:background="@color/color_facebook"
                 android:onClick="onSignIn"
                 android:text="@string/txt_Login"
                 android:textColor="@android:color/white" />
 
-            <Button
+              <Button
                 android:id="@+id/btnCreateAccount"
                 android:layout_width="125dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:background="@color/holo_green_dark"
+                android:background="@color/color_facebook"
                 android:text="@string/txt_signin_createaccount"
                 android:textColor="@android:color/white" />
             </RelativeLayout>
         </LinearLayout>
-        <TextView
-            android:id="@+id/tvOr"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:gravity="center"
-            android:text="OR"
-            android:textColor="@color/holo_green_dark" />
+
+      <TextView
+        android:id="@+id/tvOr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="OR"
+        android:textColor="@color/color_facebook"
+        android:textStyle="bold" />
         <LinearLayout
             android:id="@+id/llForFacebook"
             android:layout_width="match_parent"
@@ -135,37 +139,39 @@
             android:orientation="vertical">
 
 
-            <Button
-                android:id="@+id/btnFbLogin"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="20dp"
-                android:background="@color/colorPrimaryDark"
-                android:drawableLeft="@drawable/ic_fb"
-                android:text="Login With Facebook"
-                android:textColor="@android:color/white" />
-
-            <Button
-                android:id="@+id/btnTwitterLogin"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_centerHorizontal="true"
-                android:background="#ff1b1b"
-                android:drawableLeft="@mipmap/ic_google1"
-                android:text="Login With Google"
-                android:textColor="@android:color/white" />
-        </LinearLayout>
-        <TextView
-            android:id="@+id/txtforgotpass"
+          <Button
+            android:id="@+id/btnFbLogin"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_centerHorizontal="true"
-            android:gravity="center_horizontal"
-            android:text="Forgot your paswword"
-            android:layout_below="@+id/linearcorp"
-            android:layout_marginTop="20dp"
-            android:textColor="@color/colorPrimary"/>
+            android:layout_marginBottom="20dp"
+            android:background="@color/color_facebook"
+            android:drawableLeft="@drawable/ic_fb"
+            android:text="Login With Facebook"
+            android:textColor="@android:color/white" />
+
+          <Button
+            android:id="@+id/btnTwitterLogin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:background="@color/color_facebook"
+            android:drawableLeft="@drawable/common_google_signin_btn_icon_light_disabled"
+            android:text="Login With Google"
+            android:textColor="@android:color/white" />
+        </LinearLayout>
+
+      <TextView
+        android:id="@+id/txtforgotpass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearcorp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="Forgot your pasword"
+        android:textColor="@color/color_facebook"
+        android:textStyle="bold" />
 
 
     </LinearLayout>

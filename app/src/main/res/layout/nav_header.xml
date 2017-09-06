@@ -15,13 +15,12 @@
     android:layout_height="wrap_content"
     android:text="Welcome to"
     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-    android:textColor="@android:color/holo_green_dark" />
+    android:textColor="@color/color_facebook" />
 
   <ImageView
     android:id="@+id/imageView"
-    android:layout_width="144dp"
-    android:layout_height="33dp"
-    android:background="@color/holo_green_dark"
+    android:layout_width="210dp"
+    android:layout_height="32dp"
     app:srcCompat="@drawable/entete" />
 
 </LinearLayout>
