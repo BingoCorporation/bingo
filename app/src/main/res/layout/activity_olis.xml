@@ -6,6 +6,13 @@
     android:layout_height="match_parent"
     tools:context="com.bingo.bingo.activities.OlisActivity">
 
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/include" />
+
+
     <ListView
         android:id="@+id/lvProduitsOlis"
         android:layout_width="match_parent"

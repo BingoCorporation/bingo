@@ -53,7 +53,7 @@ public class CustomProduitAdapter extends ArrayAdapter<Produit> {
 
             viewHolder.nomProduit = (TextView) convertView.findViewById(R.id.tvProduitsOlis);
             viewHolder.prixProduit = (TextView)convertView.findViewById(R.id.tvPrixProd);
-            viewHolder.ivProduit = (ImageView) convertView.findViewById(R.id.ivProduitOlis);
+            //viewHolder.ivProduit = (ImageView) convertView.findViewById(R.id.ivProduitOlis);
             //viewHolder.etatProduit = (TextView)convertView.findViewById(R.id.tvEtatProduit);
 
             // Cache the viewHolder object inside the fresh view
