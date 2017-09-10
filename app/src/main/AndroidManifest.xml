@@ -21,7 +21,7 @@
         </activity>
         <activity android:name=".activities.SignInActivity" />
         <activity android:name=".activities.MainActivity" />
-        <activity android:name=".activities.OlisActivity" />
+        <activity android:name=".activities.DetailProduitActivity" />
         <activity android:name=".activities.CreateAccountActivity" />
         <activity android:name=".activities.CategorieProduitActivity" />
         <activity android:name=".activities.DetailActivity"></activity>

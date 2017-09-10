@@ -23,7 +23,7 @@
         android:gravity="center"
         android:text="@string/title_register_activity"
         android:textAlignment="center"
-        android:textColor="@android:color/holo_green_dark"
+        android:textColor="@color/color_facebook"
         android:textSize="40sp"
         android:textStyle="bold" />
 </LinearLayout>
@@ -43,21 +43,21 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="5dp"
-    android:textColorHint="@color/holo_green_dark">
+    android:textColorHint="@color/color_facebook">
         <EditText
             android:id="@+id/etname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/hint_register_name"
             android:inputType="textPersonName"
-            android:backgroundTint="@color/holo_green_dark"/>
+            android:backgroundTint="@color/color_facebook"/>
 </android.support.design.widget.TextInputLayout>
         <android.support.design.widget.TextInputLayout
             android:id="@+id/tiemail"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
-            android:textColorHint="@color/holo_green_dark">
+            android:textColorHint="@color/color_facebook">
         <EditText
             android:id="@+id/etemail"
             android:layout_width="match_parent"
@@ -70,36 +70,36 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
-        android:textColorHint="@color/holo_green_dark">
+        android:textColorHint="@color/color_facebook">
         <EditText
             android:id="@+id/etadresse"
             android:layout_width="match_parent"
             android:hint="Adresse"
             android:inputType="textPersonName"
             android:layout_height="wrap_content"
-            android:textColorHint="@color/holo_green_dark"
-            android:backgroundTint="@color/holo_green_dark"/>
+            android:textColorHint="@color/color_facebook"
+            android:backgroundTint="@color/color_facebook"/>
     </android.support.design.widget.TextInputLayout>
         <android.support.design.widget.TextInputLayout
             android:id="@+id/tiphone"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
-            android:textColorHint="@color/holo_green_dark">
+            android:textColorHint="@color/color_facebook">
         <EditText
             android:id="@+id/ettelephone"
             android:layout_width="match_parent"
             android:hint="Phone number"
             android:inputType="phone"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/holo_green_dark"/>
+            android:backgroundTint="@color/color_facebook"/>
         </android.support.design.widget.TextInputLayout>
         <android.support.design.widget.TextInputLayout
             android:id="@+id/tipassword"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
-            android:textColorHint="@color/holo_green_dark">
+            android:textColorHint="@color/color_facebook">
         <EditText
             android:id="@+id/etPassword"
             android:layout_width="match_parent"
@@ -107,21 +107,21 @@
             android:inputType="textPassword"
             android:layout_height="wrap_content"
 
-            android:backgroundTint="@color/holo_green_dark" />
+            android:backgroundTint="@color/color_facebook" />
         </android.support.design.widget.TextInputLayout>
         <android.support.design.widget.TextInputLayout
             android:id="@+id/ticonfirm"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
-            android:textColorHint="@color/holo_green_dark">
+            android:textColorHint="@color/color_facebook">
         <EditText
             android:id="@+id/etconfirmpassword"
             android:layout_width="match_parent"
             android:hint="Confirm Password"
             android:inputType="textPassword"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/holo_green_dark"/>
+            android:backgroundTint="@color/color_facebook"/>
         </android.support.design.widget.TextInputLayout>
         <Button
             android:id="@+id/btn_register"
@@ -130,7 +130,7 @@
             android:layout_below="@+id/etPassword"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
-            android:background="@color/holo_green_dark"
+            android:background="@color/color_facebook"
             android:text="Create Account"
             android:onClick="onSignIn"
             android:textColor="@android:color/white"

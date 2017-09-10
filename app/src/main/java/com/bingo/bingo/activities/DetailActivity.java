@@ -45,10 +45,6 @@ public class DetailActivity extends AppCompatActivity {
             }
         });
 
-        // Enable up icon
-      //  getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-
 
 
         Entreprise entreprise = (Entreprise) getIntent().getSerializableExtra("Entreprise");
@@ -70,8 +66,6 @@ public class DetailActivity extends AppCompatActivity {
         ivEntreprise = (ImageView) findViewById(ivEntrepriseDetail);
         Picasso.with(this).load(entreprise.getImageEntreprise())
                 .into(ivEntreprise);
-
-
 
 
     }
@@ -106,15 +100,12 @@ public class DetailActivity extends AppCompatActivity {
 
         Intent sendIntent = new Intent();
         sendIntent.setAction(Intent.ACTION_SEND);
-        sendIntent.putExtra(Intent.EXTRA_TEXT, tvEntrepriseName.getText().toString() + " / " +
+        sendIntent.putExtra(Intent.EXTRA_TEXT,"Nom de l'entreprise :" + tvEntrepriseName.getText().toString() + " " + " Adresse :"+
                 tvEntrepriseAdresse.getText().toString() +
-                " / " + tvEntreprisePhone.getText().toString());
+                " " + " Telephone :" + tvEntreprisePhone.getText().toString());
         sendIntent.setType("text/plain");
         startActivity(sendIntent);
     }
-
-
-
 
 
 }

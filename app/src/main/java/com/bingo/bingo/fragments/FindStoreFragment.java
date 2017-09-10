@@ -91,9 +91,6 @@ public class FindStoreFragment extends Fragment {
 
             }
         });
-        // Inflate the layout for this fragment
-       // return inflater.inflate(R.layout.fragment_find_store, container, false);
-
         return view;
     }
 
@@ -104,18 +101,12 @@ public class FindStoreFragment extends Fragment {
         inflater.inflate(R.menu.menu_search, menu);
         final MenuItem searchItem = menu.findItem(R.id.action_search);
         final SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
-        //// Expand the search view and request focus
-        //searchItem.expandActionView();
-        //searchView.requestFocus();
+
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 // perform query here
-
-                // workaround to avoid issues with some emulators and keyboard devices firing twice if a keyboard enter is used
-                // see https://code.google.com/p/android/issues/detail?id=24599
-
 
                 fetchEntreprise(query);
                 searchView.clearFocus();
@@ -150,15 +141,14 @@ public class FindStoreFragment extends Fragment {
         lvEntreprise.setAdapter(adapter);
 
 
-        IDataStore<Map> recettesStorage = Backendless.Data.of("Entreprise");
+        IDataStore<Map> entrepriseStorage = Backendless.Data.of("Entreprise");
 
 
         DataQueryBuilder queryBuilder = DataQueryBuilder.create();
-        // queryBuilder.setWhereClause( whereClause.toString());
 
         queryBuilder.setWhereClause("nomEntreprise like'%" + query + "%'");
 
-        recettesStorage.find(queryBuilder, new AsyncCallback<List<Map>>()
+        entrepriseStorage.find(queryBuilder, new AsyncCallback<List<Map>>()
 
         {
 
@@ -166,7 +156,6 @@ public class FindStoreFragment extends Fragment {
             @Override
             public void handleResponse(List<Map> response) {
 
-                //recette = (recettes.fromListMap(response));
                 adapter.addAll(Entreprise.fromListMap(response));
                 adapter.notifyDataSetChanged();
                 Log.d("DEBUG", lvEntreprise.toString());

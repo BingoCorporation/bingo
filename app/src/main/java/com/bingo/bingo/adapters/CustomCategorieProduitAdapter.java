@@ -50,7 +50,6 @@ public class CustomCategorieProduitAdapter extends ArrayAdapter<CategorieProduit
             LayoutInflater inflater = LayoutInflater.from(getContext());
 
             convertView = inflater.inflate(R.layout.item_categorie_produit, parent, false);
-            // convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_entreprise, parent, false);
 
             viewHolder.ivCategorieProduit= (ImageView) convertView.findViewById(R.id.ivCategorieProduit);
             viewHolder.tvCategorieProduitName = (TextView) convertView.findViewById(R.id.tvCategorieProduitName);
