@@ -24,10 +24,7 @@
         <activity android:name=".activities.OlisActivity" />
         <activity android:name=".activities.CreateAccountActivity" />
         <activity android:name=".activities.CategorieProduitActivity" />
-        <activity android:name=".activities.DominosActivity" />
-        <activity android:name=".activities.ReserveActivity" />
-        <activity android:name=".activities.PotiwaActivity" />
-        <activity android:name=".activities.KokoyeActivity"></activity>
+        <activity android:name=".activities.DetailActivity"></activity>
     </application>
 
 </manifest>

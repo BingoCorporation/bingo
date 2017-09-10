@@ -1,5 +1,6 @@
 package com.bingo.bingo.models;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -13,7 +14,7 @@ import java.util.Map;
 >>>>>>> afd237bea4bd670bb91b1a1957cd2dda8fc15a49
  */
 
-public class Entreprise {
+public class Entreprise implements Serializable {
 
     public CategorieProduit categorieProduitId;
     public Users userId;
@@ -112,8 +113,11 @@ public class Entreprise {
             Entreprise ent = new Entreprise();
 
             ent.setNomEntreprise((String)map.get(i).get("nomEntreprise"));
+            ent.setDescriptionEntreprise((String)map.get(i).get("descriptionEntreprise"));
             ent.setAdresseEntreprise((String) map.get(i).get("adresseEntreprise"));
+            ent.setPhoneEntreprise((String) map.get(i).get("phoneEntreprise"));
             ent.setImageEntreprise((String) map.get(i).get("imageEntreprise"));
+
 
             listeEntreprise.add(ent);
 

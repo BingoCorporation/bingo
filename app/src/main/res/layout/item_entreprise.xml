@@ -32,6 +32,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginTop="20dp"
                 android:background="@color/holo_green_dark"
+                android:gravity="center_horizontal"
                 android:text="Oli's"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="@android:color/white" />
@@ -40,13 +41,9 @@
                 android:id="@+id/ivEntreprise"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/tvEntrepriseName"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="22dp"
-                android:layout_marginStart="22dp"
-                android:layout_marginTop="27dp" />
+                android:layout_marginBottom="24dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
 
         </RelativeLayout>
 

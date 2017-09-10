@@ -39,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
         //setContentView(R.layout.activity_main);
         setContentView(R.layout.activity_main);
         Backendless.initApp(this,App_ID,Secret_Key);
+
+
         toolbar = (Toolbar) findViewById(R.id.toolbar);
 
         setSupportActionBar(toolbar);
