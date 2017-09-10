@@ -77,10 +77,9 @@ public class DetailActivity extends AppCompatActivity {
     }
 
 
-    //private ShareActionProvider mShareActionProvider;
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_share, menu);
+        getMenuInflater().inflate(R.menu.menu_detail, menu);
         return true;
     }
 
@@ -91,6 +90,10 @@ public class DetailActivity extends AppCompatActivity {
             case R.id.miShare:
                 sharingIntent();
                 // overridePendingTransition(R.animator.anim_left, R.animator.anim_right);
+                return true;
+            case R.id.miMenu:
+                Intent intent = new Intent(DetailActivity.this, CategorieProduitActivity.class);
+                startActivity(intent);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

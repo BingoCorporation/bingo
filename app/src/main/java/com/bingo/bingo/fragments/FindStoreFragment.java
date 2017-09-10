@@ -89,52 +89,6 @@ public class FindStoreFragment extends Fragment {
                 startActivity(intent);
 
 
-              /*  if (position == 0){
-
-                    Intent intent = new Intent(getActivity(), CategorieProduitActivity.class);
-                    startActivity(intent);
-
-                    Toast.makeText(getActivity(), "La Reserve", Toast.LENGTH_SHORT).show();
-
-
-                }
-
-                else if  (position == 1){
-
-                    Toast.makeText(getActivity(), "Dominoes", Toast.LENGTH_SHORT).show();
-                }
-                else if  (position == 2){
-
-                    Toast.makeText(getActivity(), "Epi d'or", Toast.LENGTH_SHORT).show();
-                }
-                else if  (position == 3){
-
-                    Toast.makeText(getActivity(), "Marriott", Toast.LENGTH_SHORT).show();
-                }
-                else if  (position == 4){
-
-                    Toast.makeText(getActivity(), "Delimart", Toast.LENGTH_SHORT).show();
-                }
-                else if  (position == 5){
-
-                    Toast.makeText(getActivity(), "La Pleiade", Toast.LENGTH_SHORT).show();
-                }   else if  (position == 6){
-
-                    Toast.makeText(getActivity(), "Tag Market", Toast.LENGTH_SHORT).show();
-                }   else if  (position == 7){
-
-                    Toast.makeText(getActivity(), "Olympic Market", Toast.LENGTH_SHORT).show();
-                }
-                else if  (position == 8){
-
-                    Toast.makeText(getActivity(), "Best Western", Toast.LENGTH_SHORT).show();
-                }
-                else if  (position == 9){
-
-                    Toast.makeText(getActivity(), "Caribbean Market", Toast.LENGTH_SHORT).show();
-                }*/
-
-
             }
         });
         // Inflate the layout for this fragment
