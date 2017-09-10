@@ -89,57 +89,8 @@ public class FindStoreFragment extends Fragment {
                 startActivity(intent);
 
 
-              /*  if (position == 0){
-
-                    Intent intent = new Intent(getActivity(), CategorieProduitActivity.class);
-                    startActivity(intent);
-
-                    Toast.makeText(getActivity(), "La Reserve", Toast.LENGTH_SHORT).show();
-
-
-                }
-
-                else if  (position == 1){
-
-                    Toast.makeText(getActivity(), "Dominoes", Toast.LENGTH_SHORT).show();
-                }
-                else if  (position == 2){
-
-                    Toast.makeText(getActivity(), "Epi d'or", Toast.LENGTH_SHORT).show();
-                }
-                else if  (position == 3){
-
-                    Toast.makeText(getActivity(), "Marriott", Toast.LENGTH_SHORT).show();
-                }
-                else if  (position == 4){
-
-                    Toast.makeText(getActivity(), "Delimart", Toast.LENGTH_SHORT).show();
-                }
-                else if  (position == 5){
-
-                    Toast.makeText(getActivity(), "La Pleiade", Toast.LENGTH_SHORT).show();
-                }   else if  (position == 6){
-
-                    Toast.makeText(getActivity(), "Tag Market", Toast.LENGTH_SHORT).show();
-                }   else if  (position == 7){
-
-                    Toast.makeText(getActivity(), "Olympic Market", Toast.LENGTH_SHORT).show();
-                }
-                else if  (position == 8){
-
-                    Toast.makeText(getActivity(), "Best Western", Toast.LENGTH_SHORT).show();
-                }
-                else if  (position == 9){
-
-                    Toast.makeText(getActivity(), "Caribbean Market", Toast.LENGTH_SHORT).show();
-                }*/
-
-
             }
         });
-        // Inflate the layout for this fragment
-       // return inflater.inflate(R.layout.fragment_find_store, container, false);
-
         return view;
     }
 
@@ -150,18 +101,12 @@ public class FindStoreFragment extends Fragment {
         inflater.inflate(R.menu.menu_search, menu);
         final MenuItem searchItem = menu.findItem(R.id.action_search);
         final SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
-        //// Expand the search view and request focus
-        //searchItem.expandActionView();
-        //searchView.requestFocus();
+
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 // perform query here
-
-                // workaround to avoid issues with some emulators and keyboard devices firing twice if a keyboard enter is used
-                // see https://code.google.com/p/android/issues/detail?id=24599
-
 
                 fetchEntreprise(query);
                 searchView.clearFocus();
@@ -196,15 +141,14 @@ public class FindStoreFragment extends Fragment {
         lvEntreprise.setAdapter(adapter);
 
 
-        IDataStore<Map> recettesStorage = Backendless.Data.of("Entreprise");
+        IDataStore<Map> entrepriseStorage = Backendless.Data.of("Entreprise");
 
 
         DataQueryBuilder queryBuilder = DataQueryBuilder.create();
-        // queryBuilder.setWhereClause( whereClause.toString());
 
         queryBuilder.setWhereClause("nomEntreprise like'%" + query + "%'");
 
-        recettesStorage.find(queryBuilder, new AsyncCallback<List<Map>>()
+        entrepriseStorage.find(queryBuilder, new AsyncCallback<List<Map>>()
 
         {
 
@@ -212,7 +156,6 @@ public class FindStoreFragment extends Fragment {
             @Override
             public void handleResponse(List<Map> response) {
 
-                //recette = (recettes.fromListMap(response));
                 adapter.addAll(Entreprise.fromListMap(response));
                 adapter.notifyDataSetChanged();
                 Log.d("DEBUG", lvEntreprise.toString());

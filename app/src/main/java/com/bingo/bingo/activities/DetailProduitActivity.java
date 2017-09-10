@@ -1,6 +1,5 @@
 package com.bingo.bingo.activities;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -10,7 +9,6 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -20,30 +18,33 @@ import com.backendless.async.callback.AsyncCallback;
 import com.backendless.exceptions.BackendlessFault;
 import com.backendless.persistence.DataQueryBuilder;
 import com.bingo.bingo.R;
-import com.bingo.bingo.adapters.CustomCategorieProduitAdapter;
-import com.bingo.bingo.models.CategorieProduit;
+import com.bingo.bingo.adapters.CustomProduitAdapter;
+import com.bingo.bingo.models.Produit;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class CategorieProduitActivity extends AppCompatActivity {
+import static com.bingo.bingo.R.id.lvProduitsOlis;
+
+public class DetailProduitActivity extends AppCompatActivity {
 
 
+    ArrayList<Produit> listeProduits;
+    CustomProduitAdapter produitAdapter ;
+    ListView lvProduits ;
 
-    ArrayList<CategorieProduit> listeCategorieProduit;
-    CustomCategorieProduitAdapter categorieProduitAdapter ;
-    ListView lvCategorieProduit ;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_categorie_produit);
+        setContentView(R.layout.activity_produit_detail);
 
+        toolbar = (Toolbar) findViewById(R.id.toolbarSearch);
 
-        //Display the toobar
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarSearch);
         setSupportActionBar(toolbar);
+
 
 
         toolbar.setNavigationIcon(R.drawable.ic_returnback);
@@ -55,47 +56,31 @@ public class CategorieProduitActivity extends AppCompatActivity {
             }
         });
 
+        lvProduits = (ListView) findViewById(lvProduitsOlis);
+        listeProduits = new ArrayList<>();
+        produitAdapter = new CustomProduitAdapter(this, listeProduits);
+        lvProduits.setAdapter(produitAdapter);
 
 
 
+        IDataStore<Map> produitsStorage = Backendless.Data.of("Produit");
 
-        lvCategorieProduit = (ListView) findViewById(R.id.lvCategorieProduit);
-        listeCategorieProduit = new ArrayList<>();
-        categorieProduitAdapter = new CustomCategorieProduitAdapter(this, listeCategorieProduit);
-        lvCategorieProduit.setAdapter(categorieProduitAdapter);
-
-
-        IDataStore<Map> categorieProduitStorage = Backendless.Data.of("CategorieProduit");
-
-        categorieProduitStorage.find(new AsyncCallback<List<Map>>() {
+        produitsStorage.find(new AsyncCallback<List<Map>>() {
             @Override
             public void handleResponse(List<Map> response) {
-                categorieProduitAdapter.addAll(CategorieProduit.fromListMap(response));
-                categorieProduitAdapter.notifyDataSetChanged();
+                produitAdapter.addAll(Produit.fromListMap(response));
+                produitAdapter.notifyDataSetChanged();
 
             }
 
             @Override
             public void handleFault(BackendlessFault fault) {
                 Log.d("DEBUG", fault.getCode());
-                Toast.makeText(CategorieProduitActivity.this, fault.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(DetailProduitActivity.this, fault.getMessage(), Toast.LENGTH_SHORT).show();
 
             }
         });
 
-
-        lvCategorieProduit.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-
-                CategorieProduit categorieProduit = listeCategorieProduit.get(position);
-                Intent intent = new Intent(CategorieProduitActivity.this, DetailProduitActivity.class);
-                startActivity(intent);
-
-
-            }
-        });
 
     }
 
@@ -114,14 +99,14 @@ public class CategorieProduitActivity extends AppCompatActivity {
             public boolean onQueryTextSubmit(String query) {
                 // perform query here
 
-                fetchCategorieProduit(query);
+                fetchProduit(query);
                 searchView.clearFocus();
                 searchView.setQuery("", false);
                 searchView.setIconified(true);
                 searchItem.collapseActionView();
 
                 // Set activity title to search query
-                CategorieProduitActivity.this.setTitle(query);
+                DetailProduitActivity.this.setTitle(query);
 
                 return true;
             }
@@ -138,31 +123,31 @@ public class CategorieProduitActivity extends AppCompatActivity {
 
 
 
-    private void fetchCategorieProduit(String query) {
-        lvCategorieProduit = (ListView) findViewById(R.id.lvCategorieProduit);
-        listeCategorieProduit = new ArrayList<>();
-        categorieProduitAdapter = new CustomCategorieProduitAdapter(this, listeCategorieProduit);
+    private void fetchProduit(String query) {
+        lvProduits = (ListView) findViewById(lvProduitsOlis);
+        listeProduits = new ArrayList<>();
+        produitAdapter = new CustomProduitAdapter(this, listeProduits);
 
-        lvCategorieProduit.setAdapter(categorieProduitAdapter);
+        lvProduits.setAdapter(produitAdapter);
 
 
-        IDataStore<Map> categorieProduitStorage = Backendless.Data.of("CategorieProduit");
+        IDataStore<Map> produitStorage = Backendless.Data.of("Produit");
 
 
         DataQueryBuilder queryBuilder = DataQueryBuilder.create();
 
-        queryBuilder.setWhereClause("nomCategorieProduit like'%" + query + "%'");
+        queryBuilder.setWhereClause("nomProduit like'%" + query + "%'");
 
-        categorieProduitStorage.find(queryBuilder, new AsyncCallback<List<Map>>()
+        produitStorage.find(queryBuilder, new AsyncCallback<List<Map>>()
 
         {
 
             @Override
             public void handleResponse(List<Map> response) {
 
-                categorieProduitAdapter.addAll(CategorieProduit.fromListMap(response));
-                categorieProduitAdapter.notifyDataSetChanged();
-                Log.d("DEBUG", lvCategorieProduit.toString());
+                produitAdapter.addAll(Produit.fromListMap(response));
+                produitAdapter.notifyDataSetChanged();
+                Log.d("DEBUG", lvProduits.toString());
                 Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_SHORT).show();
 
             }
@@ -177,6 +162,9 @@ public class CategorieProduitActivity extends AppCompatActivity {
 
 
     }
+
+
+
 
 
 

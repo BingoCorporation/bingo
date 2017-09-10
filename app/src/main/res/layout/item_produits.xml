@@ -1,33 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="5dp"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:paddingLeft="7dp"
+    android:paddingRight="7dp"
     >
 
 
-    <TextView
-        android:id="@+id/tvProduitsOlis"
-        android:layout_width="wrap_content"
+    <android.support.v7.widget.CardView
+
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="1dp"
-        android:paddingRight="1dp"
-        android:text="Sarah"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="20dp" />
-
-    <TextView
-        android:id="@+id/tvPrixProd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:layout_alignTop="@+id/tvProduitsOlis"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        card_view:cardCornerRadius="5dp"
+        card_view:contentPadding="5dp">
 
 
-</RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+            android:id="@+id/ivProduit"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitCenter"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginRight="10dp" />
+
+            <TextView
+                android:id="@+id/tvNomProduit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp"
+                android:text="Sarah"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_toRightOf="@+id/ivProduit"
+                android:layout_marginLeft="20dp"
+                 />
+
+            <TextView
+                android:id="@+id/tvPrixProduit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:layout_below="@+id/tvNomProduit"
+                android:layout_alignLeft="@+id/tvNomProduit"
+                android:layout_alignStart="@+id/tvNomProduit"
+                android:layout_marginTop="17dp" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
+
+
+

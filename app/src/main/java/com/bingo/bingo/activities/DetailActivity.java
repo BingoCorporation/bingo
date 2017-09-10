@@ -45,10 +45,6 @@ public class DetailActivity extends AppCompatActivity {
             }
         });
 
-        // Enable up icon
-      //  getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-
 
 
         Entreprise entreprise = (Entreprise) getIntent().getSerializableExtra("Entreprise");
@@ -72,15 +68,12 @@ public class DetailActivity extends AppCompatActivity {
                 .into(ivEntreprise);
 
 
-
-
     }
 
 
-    //private ShareActionProvider mShareActionProvider;
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_share, menu);
+        getMenuInflater().inflate(R.menu.menu_detail, menu);
         return true;
     }
 
@@ -91,6 +84,10 @@ public class DetailActivity extends AppCompatActivity {
             case R.id.miShare:
                 sharingIntent();
                 // overridePendingTransition(R.animator.anim_left, R.animator.anim_right);
+                return true;
+            case R.id.miMenu:
+                Intent intent = new Intent(DetailActivity.this, CategorieProduitActivity.class);
+                startActivity(intent);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -103,15 +100,12 @@ public class DetailActivity extends AppCompatActivity {
 
         Intent sendIntent = new Intent();
         sendIntent.setAction(Intent.ACTION_SEND);
-        sendIntent.putExtra(Intent.EXTRA_TEXT, tvEntrepriseName.getText().toString() + " / " +
+        sendIntent.putExtra(Intent.EXTRA_TEXT,"Nom de l'entreprise :" + tvEntrepriseName.getText().toString() + " " + " Adresse :"+
                 tvEntrepriseAdresse.getText().toString() +
-                " / " + tvEntreprisePhone.getText().toString());
+                " " + " Telephone :" + tvEntreprisePhone.getText().toString());
         sendIntent.setType("text/plain");
         startActivity(sendIntent);
     }
-
-
-
 
 
 }

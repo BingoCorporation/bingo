@@ -4,18 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.bingo.bingo.activities.OlisActivity">
+    tools:context="com.bingo.bingo.activities.DetailProduitActivity">
 
-    <include
-        layout="@layout/toolbar"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarSearch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/include" />
+        android:background="@color/color_facebook"
+        android:fitsSystemWindows="true"
+        android:minHeight="?attr/actionBarSize" />
 
 
     <ListView
         android:id="@+id/lvProduitsOlis"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/include" />
+        android:layout_below="@+id/toolbarSearch" />
 </RelativeLayout>
