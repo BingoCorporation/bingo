@@ -1,5 +1,6 @@
 package com.bingo.bingo.activities;
 
+import android.content.DialogInterface;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -8,9 +9,11 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.backendless.Backendless;
 import com.bingo.bingo.R;
@@ -28,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private DrawerLayout mDrawer;
     private Toolbar toolbar;
     private NavigationView nvDrawer;
+
     // Make sure to be using android.support.v7.app.ActionBarDrawerToggle version.
     // The android.support.v4.app.ActionBarDrawerToggle has been deprecated.
     private ActionBarDrawerToggle drawerToggle;
@@ -40,8 +44,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Backendless.initApp(this,App_ID,Secret_Key);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-
         setSupportActionBar(toolbar);
+
+
+
+
         // Find our drawer view
         mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         // Tie DrawerLayout events to the ActionBarToggle
@@ -141,6 +148,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.nav_seventh_fragment:
                 fragmentClass = LogOutFragment.class;
+                LogOut();
                 break;
             default:
                 fragmentClass =FindStoreFragment.class;
@@ -166,6 +174,23 @@ public class MainActivity extends AppCompatActivity {
     }
 public void LogOut()
 {
+    AlertDialog.Builder builder=new AlertDialog.Builder(this);
+    builder.setCancelable(true);
+    builder.setTitle("Log out");
+    builder.setMessage("Are you sure you want to Quit");
+    builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+            Toast.makeText(MainActivity.this, "Logged", Toast.LENGTH_LONG).show();
+            finish();
+        }
+    });
+    builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+            Toast.makeText(MainActivity.this, "Cancel", Toast.LENGTH_LONG).show();
+        }
+    });
 
 }
 }

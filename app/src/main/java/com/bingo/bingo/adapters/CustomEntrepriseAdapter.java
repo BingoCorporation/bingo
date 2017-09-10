@@ -73,23 +73,11 @@ public class CustomEntrepriseAdapter extends ArrayAdapter<Entreprise> {
         Picasso.with(getContext()).load(entreprise.getImageEntreprise()).into(viewHolder.ivEntreprise);
 
 
+
         // Return the completed view to render on screen
         return convertView;
 
 
-
-
-        // Lookup view for data population
-     /*   TextView tvEntrepriseName = (TextView) convertView.findViewById(R.id.tvEntrepriseName);
-        TextView tvEntrepriseAdresse = (TextView) convertView.findViewById(R.id.tvEntrepriseAdresse);
-        //ImageView ivEntreprise = (ImageView)convertView.findViewById(R.id.ivEntreprise);
-        // Populate the data into the template view using the data object
-        tvEntrepriseName.setText(entreprise.nomEntreprise);
-        tvEntrepriseAdresse.setText(entreprise.adresseEntreprise);
-        //ivEntreprise.setImageURI(Uri.parse(entreprise.imageEntreprise));
-
-        // Return the completed view to render on screen
-        return convertView;*/
     }
 
 

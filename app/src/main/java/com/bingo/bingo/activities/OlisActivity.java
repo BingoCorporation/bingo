@@ -12,8 +12,8 @@ import com.backendless.IDataStore;
 import com.backendless.async.callback.AsyncCallback;
 import com.backendless.exceptions.BackendlessFault;
 import com.bingo.bingo.R;
-import com.bingo.bingo.adapters.CustomProduitsAdapter;
-import com.bingo.bingo.models.Produits;
+import com.bingo.bingo.adapters.CustomProduitAdapter;
+import com.bingo.bingo.models.Produit;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,8 +24,8 @@ import static com.bingo.bingo.R.id.lvProduitsOlis;
 public class OlisActivity extends AppCompatActivity {
 
 
-    ArrayList<Produits> listeProduits;
-    CustomProduitsAdapter adapter ;
+    ArrayList<Produit> listeProduits;
+    CustomProduitAdapter produitAdapter ;
     ListView lvProduits ;
 
     private Toolbar toolbar;
@@ -41,16 +41,16 @@ public class OlisActivity extends AppCompatActivity {
 
         lvProduits = (ListView) findViewById(lvProduitsOlis);
         listeProduits = new ArrayList<>();
-        adapter = new CustomProduitsAdapter(this, listeProduits);
-        lvProduits.setAdapter(adapter);
+        produitAdapter = new CustomProduitAdapter(this, listeProduits);
+        lvProduits.setAdapter(produitAdapter);
 
 
-        IDataStore<Map> produitsStorage = Backendless.Data.of("Produits");
+        IDataStore<Map> produitsStorage = Backendless.Data.of("Produit");
 
         produitsStorage.find(new AsyncCallback<List<Map>>() {
             @Override
             public void handleResponse(List<Map> response) {
-                adapter.addAll(Produits.fromListMap(response));
+                produitAdapter.addAll(Produit.fromListMap(response));
 
             }
 
@@ -66,14 +66,4 @@ public class OlisActivity extends AppCompatActivity {
     }
 
 
-
-   /* private void populateProduitsList(){
-        // Construct the data source
-        ArrayList<Produits> produitsArrayList= Produits.getProduits();
-        // Create the adapter to convert the array to views
-        CustomProduitsAdapter adapter = new CustomProduitsAdapter(this, produitsArrayList);
-        // Attach the adapter to a ListView
-        ListView listView = (ListView) findViewById(R.id.lvProduitsOlis);
-        listView.setAdapter(adapter);
-    }*/
 }
