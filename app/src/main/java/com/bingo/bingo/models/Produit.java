@@ -1,5 +1,6 @@
 package com.bingo.bingo.models;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -9,13 +10,14 @@ import java.util.Map;
  * Created by Ebillson GJ on 8/19/2017.
  */
 
-public class Produit {
+public class Produit implements Serializable {
 
     public Boolean etatProduit;
     public CategorieProduit categorieProduitId;
     public Unite uniteId;
     public String nomProduit;
     public Double prixProduit;
+    public String imageProduit;
     public Date created;
     public String objectId;
 
@@ -62,6 +64,15 @@ public class Produit {
         this.prixProduit = prixProduit;
     }
 
+
+    public String getImageProduit() {
+        return imageProduit;
+    }
+
+    public void setImageProduit(String imageProduit) {
+        this.imageProduit = imageProduit;
+    }
+
     public Date getCreated() {
         return created;
     }
@@ -89,9 +100,7 @@ public class Produit {
 
             prod.setNomProduit((String)map.get(i).get("nomProduit"));
             prod.setPrixProduit(Double.parseDouble(map.get(i).get("prixProduit").toString()));
-
-           // prod.setEtat_produit((Boolean) map.get(i).get("etat_produit"));
-
+            prod.setImageProduit((String) map.get(i).get("imageProduit"));
             listeProduit.add(prod);
 
 

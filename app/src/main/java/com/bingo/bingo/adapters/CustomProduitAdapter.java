@@ -5,10 +5,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bingo.bingo.R;
 import com.bingo.bingo.models.Produit;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -23,8 +25,7 @@ public class CustomProduitAdapter extends ArrayAdapter<Produit> {
     private static class ViewHolder {
         TextView nomProduit;
         TextView prixProduit;
-       // TextView etatProduit;
-
+        ImageView ivProduit;
     }
 
     public CustomProduitAdapter(Context context, ArrayList<Produit> produit) {
@@ -48,11 +49,11 @@ public class CustomProduitAdapter extends ArrayAdapter<Produit> {
             viewHolder = new ViewHolder();
             LayoutInflater inflater = LayoutInflater.from(getContext());
             convertView = inflater.inflate(R.layout.item_produits, parent, false);
-            //convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_produits, parent, false);
 
-            viewHolder.nomProduit = (TextView) convertView.findViewById(R.id.tvProduitsOlis);
-            viewHolder.prixProduit = (TextView)convertView.findViewById(R.id.tvPrixProd);
-            //viewHolder.etatProduit = (TextView)convertView.findViewById(R.id.tvEtatProduit);
+
+            viewHolder.nomProduit = (TextView) convertView.findViewById(R.id.tvNomProduit);
+            viewHolder.prixProduit = (TextView)convertView.findViewById(R.id.tvPrixProduit);
+            viewHolder.ivProduit = (ImageView) convertView.findViewById(R.id.ivProduit);
 
             // Cache the viewHolder object inside the fresh view
             convertView.setTag(viewHolder);
@@ -66,8 +67,9 @@ public class CustomProduitAdapter extends ArrayAdapter<Produit> {
         // Populate the data from the data object via the viewHolder object
         // into the template view.
         viewHolder.nomProduit.setText(produit.nomProduit);
-        viewHolder.prixProduit.setText(produit.prixProduit+ " gdes.");
-       // viewHolder.etatProduit.setText(Produit.etat_produit);
+        viewHolder.prixProduit.setText(produit.prixProduit+ " Gdes.");
+        Picasso.with(getContext()).load(produit.getImageProduit()).into(viewHolder.ivProduit);
+
         // Return the completed view to render on screen
         return convertView;
 

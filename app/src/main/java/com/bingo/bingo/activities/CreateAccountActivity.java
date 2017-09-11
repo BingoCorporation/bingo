@@ -1,6 +1,5 @@
 package com.bingo.bingo.activities;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -61,8 +60,6 @@ public class CreateAccountActivity extends AppCompatActivity {
                     public void handleResponse(BackendlessUser response) {
                         Toast.makeText(CreateAccountActivity.this, "Register Successfully", Toast.LENGTH_LONG).show();
                         clearEdittext();
-                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                        startActivity(intent);
                     }
 
                     @Override

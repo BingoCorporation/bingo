@@ -22,5 +22,9 @@ public class LogOutFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_log_out, container, false);
     }
+    public void LogOut()
+    {
 
+
+    }
 }

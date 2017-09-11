@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/miShare"
+        android:icon="@drawable/ic_share"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="4"
+        android:title="Share"
+        android:actionProviderClass=
+            "android.widget.ShareActionProvider" >
+    </item>
+    <item
+        android:id="@+id/miMenu"
+        android:icon="@drawable/ic_menu"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="3"
+        android:title="Menu" >
+    </item>
+
+</menu>
