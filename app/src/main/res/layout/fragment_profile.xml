@@ -48,12 +48,15 @@
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textAlignment="textStart"
+        android:background="@color/cardview_shadow_end_color"
+        android:text="USER PROFILE"
+        android:textAlignment="center"
+        android:textColor="@color/color_facebook"
+        android:textStyle="bold"
         tools:text="USER PROFILE" />
 
       <TextView
-        android:id="@+id/tvUsername"
+        android:id="@+id/tvUsernameProf"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -61,26 +64,14 @@
         android:drawableLeft="@drawable/ic_profile"
         android:fontFamily="sans-serif"
         android:gravity="center"
-        android:text="User name "
+        android:text="@string/hint_username"
+        android:textAlignment="center"
         android:textColor="@color/color_facebook"
-        android:textSize="15sp"
-        android:textStyle="bold" />
+        android:textSize="15sp" />
+
 
       <TextView
-        android:id="@+id/tvName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:fontFamily="sans-serif"
-        android:gravity="center"
-        android:text="Name "
-        android:textColor="@color/color_facebook"
-        android:textSize="15sp"
-        android:textStyle="bold" />
-
-      <TextView
-        android:id="@+id/tvAdresse"
+        android:id="@+id/tvAdresseProf"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -88,13 +79,13 @@
         android:drawableLeft="@drawable/ic_adress"
         android:fontFamily="sans-serif"
         android:gravity="center"
-        android:text="Addresse "
+        android:text="@string/hint_business_adress"
+        android:textAlignment="center"
         android:textColor="@color/color_facebook"
-        android:textSize="15sp"
-        android:textStyle="bold" />
+        android:textSize="15sp" />
 
       <TextView
-        android:id="@+id/tvEmail"
+        android:id="@+id/tvEmailProf"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -102,13 +93,13 @@
         android:drawableLeft="@drawable/ic_business_email"
         android:fontFamily="sans-serif"
         android:gravity="center"
-        android:text="Email "
+        android:text="@string/hint_business_email"
+        android:textAlignment="center"
         android:textColor="@color/color_facebook"
-        android:textSize="15sp"
-        android:textStyle="bold" />
+        android:textSize="15sp" />
 
       <TextView
-        android:id="@+id/tvTelephone"
+        android:id="@+id/tvTelephoneProf"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -116,11 +107,11 @@
         android:drawableLeft="@drawable/ic_business_phone"
         android:fontFamily="sans-serif"
         android:gravity="center"
-        android:text="Telephone "
+        android:text="@string/hint_register_telephone"
+        android:textAlignment="center"
         android:textColor="@color/color_facebook"
         android:textSize="15sp"
-        android:textStyle="bold" />
-
+        tools:text="@string/hint_register_telephone" />
 
     </LinearLayout>
 

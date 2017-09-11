@@ -12,7 +12,6 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import com.backendless.Backendless;
 import com.backendless.BackendlessUser;
 import com.backendless.async.callback.AsyncCallback;
@@ -76,7 +75,6 @@ public class SignInActivity extends AppCompatActivity {
 
             }
         });
-
 
         btnCreateAccount.setOnClickListener(new View.OnClickListener() {
             @Override
