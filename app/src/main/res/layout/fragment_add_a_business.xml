@@ -7,8 +7,8 @@
     <LinearLayout
         android:id="@+id/layoutentete"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-      android:layout_marginTop="20dp"
+        android:layout_height="70dp"
+      android:layout_marginTop="10dp"
         android:orientation="vertical"
       android:layout_alignParentTop="true"
       android:layout_alignParentLeft="true"
@@ -24,7 +24,7 @@
         android:gravity="center"
         android:text="Register your Business"
         android:textColor="@color/color_facebook"
-        android:textSize="35sp"
+        android:textSize="32sp"
         android:textStyle="bold" />
     </LinearLayout>
 
@@ -35,7 +35,7 @@
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
          android:orientation="vertical"
-         android:layout_marginTop="18dp"
+         android:layout_margin="15dp"
          android:layout_below="@+id/layoutentete"
          android:layout_centerHorizontal="true">
 
@@ -50,7 +50,6 @@
                android:hint="@string/hint_business_name"
                android:inputType="textPersonName"
                android:textColorHint="@android:color/darker_gray" />
-
            <EditText
                android:id="@+id/etBusinessAdress"
                android:layout_width="match_parent"
@@ -88,19 +87,50 @@
                android:inputType="textEmailAddress"
                android:textColorHint="@android:color/darker_gray" />
 
-         <Button
-           android:id="@+id/btnAddBusiness"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
+           <EditText
+               android:id="@+id/etBusinessDescription"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:ems="10"
+               android:inputType="textMultiLine"
+               android:drawableLeft="@drawable/ic_account_history"
+               android:layout_marginTop="10dp"
+               android:gravity="left|fill"
+               android:hint="Description"/>
 
-           android:layout_centerHorizontal="true"
-           android:layout_marginTop="50dp"
-           android:background="@color/color_facebook"
-           android:onClick="onSignIn"
-           android:text="Add Business"
-           android:textColor="@android:color/white" />
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="60dp"
+               android:layout_marginTop="5dp">
+
+               <ImageView
+                   android:id="@+id/imgbusiness"
+                   android:layout_width="100dp"
+                   android:layout_height="50dp"
+                   android:layout_marginLeft="10dp"
+                   android:src="@drawable/addlogo" />
+               <Button
+                   android:id="@+id/btnchoosepic"
+                   android:layout_width="150dp"
+                   android:layout_height="40dp"
+                   android:text="CHOOSE PHOTO"
+                   android:background="@android:color/background_light"
+                   android:textColor="@color/colorPrimaryDark"
+                   android:layout_alignBottom="@+id/imgbusiness"
+                   android:layout_toRightOf="@+id/imgbusiness"
+                   android:layout_toEndOf="@+id/imgbusiness" />
+           </RelativeLayout>
+
+           <Button
+               android:id="@+id/btnAddBusiness"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_centerHorizontal="true"
+               android:layout_marginTop="20dp"
+               android:background="@color/color_facebook"
+               android:onClick="onSignIn"
+               android:text="Add Business"
+               android:textColor="@android:color/white" />
 
        </LinearLayout>
-
-
 </RelativeLayout>
