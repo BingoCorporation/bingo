@@ -50,8 +50,9 @@
             android:ems="10"
             android:hint="Phone number"
             android:inputType="phone"
+            android:textColor="@color/color_facebook"
             android:textColorHint="@color/color_facebook"
-            android:textColorLink="@color/color_facebook" />
+            android:textColorLink="@android:color/holo_red_dark" />
 
         </android.support.design.widget.TextInputLayout>
 
@@ -74,7 +75,7 @@
             android:inputType="textPassword"
             android:textColor="@color/color_facebook"
             android:textColorHint="@color/cardview_light_background"
-            android:textColorLink="@color/color_facebook" />
+            android:textColorLink="@android:color/holo_red_dark" />
         </android.support.design.widget.TextInputLayout>
 
 
@@ -90,7 +91,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="@string/txt_signin_showpassword"
-        android:textColor="@color/common_google_signin_btn_text_light_default" />
+        android:textColor="@color/color_facebook" />
 
         <LinearLayout
             android:id="@+id/llForButtons"
@@ -155,7 +156,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_centerHorizontal="true"
-            android:background="@color/color_facebook"
+            android:background="@android:color/holo_red_dark"
             android:drawableLeft="@drawable/common_google_signin_btn_icon_light_disabled"
             android:text="Login With Google"
             android:textColor="@android:color/white" />
