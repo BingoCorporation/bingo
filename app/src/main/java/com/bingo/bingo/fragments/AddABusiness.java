@@ -3,8 +3,11 @@ package com.bingo.bingo.fragments;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -19,8 +22,13 @@ import android.widget.Toast;
 import com.backendless.Backendless;
 import com.backendless.async.callback.AsyncCallback;
 import com.backendless.exceptions.BackendlessFault;
+import com.backendless.files.BackendlessFile;
 import com.bingo.bingo.R;
 
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -31,7 +39,9 @@ public class AddABusiness extends Fragment {
     public static final String App_ID="6489B38C-DCC1-9240-FF77-984DC15FAB00";
     public static final String Secret_Key="D8D8428D-0D09-2B26-FFDB-0CB665428700";
     private  static  final int PICK_IMAGE=100;
+
     Uri imageUri;
+    String remotePath="https://api.backendless.com/6489B38C-DCC1-9240-FF77-984DC15FAB00/167739AE-B593-9873-FF29-7B63B0FEEA00/files/businessImages";
     EditText Businessname;
     EditText Businessphone;
     EditText Businessadresse;
@@ -47,6 +57,7 @@ public class AddABusiness extends Fragment {
         if (resultCode== Activity.RESULT_OK && requestCode==PICK_IMAGE)
         {
             imageUri=data.getData();
+
             BusinessImage.setImageURI(imageUri);
         }
     }
@@ -112,12 +123,46 @@ public class AddABusiness extends Fragment {
                     }
                 });
                 // uploads a file to a remote directory in Backendless Hosting
-               //  Backendless.Files.upload( imageUri, AsyncCallback<BackendlessFile> responder );
+                uploadPhoto();
             }
         });
 
 
         return  view;
+    }
+
+    public void uploadPhoto(){
+        try {
+            String IMAGE_DIRECTORY="/images";
+            Bitmap bitmap= MediaStore.Images.Media.getBitmap(getContext().getContentResolver(), imageUri);
+            ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+            bitmap.compress(Bitmap.CompressFormat.JPEG,90,bytes);
+            File getimage=new File(Environment.getExternalStorageDirectory() +IMAGE_DIRECTORY);
+            File f= new File(Businessname.getText().toString() +".jpeg");
+            f.createNewFile();
+            FileOutputStream fop= new FileOutputStream(f);
+            fop.write(bytes.toByteArray());
+            MediaScannerConnection.scanFile(getContext(),new String[]{f.getPath()}, new String[]{"image/jpeg"},null);
+            // uploads a file to a remote directory in Backendless Hosting
+            Backendless.Files.upload(f,
+                    remotePath,
+                    new AsyncCallback<BackendlessFile>() {
+                        @Override
+                        public void handleResponse(BackendlessFile response) {
+
+                        }
+
+                        @Override
+                        public void handleFault(BackendlessFault fault) {
+                            Log.d("Image", fault.getMessage());
+                        }
+                    });
+            fop.close();
+        }
+        catch (IOException e){
+
+        }
+
     }
 
     public void clearEdittext()
