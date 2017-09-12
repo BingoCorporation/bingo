@@ -194,7 +194,6 @@ public void DialogLogOut()
         builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(MainActivity.this, "Logged", Toast.LENGTH_LONG).show();
                 Logout();
                 //finish();
             }
